@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="ko"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="JooStory.net"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><link rel="canonical" href="https://blog.joostory.net/465"/><title>Electron 시작하기 (3) - UI</title><meta property="og:type" content="article"/><meta property="og:title" content="Electron 시작하기 (3) - UI"/><meta property="og:description" content="Browser도 만들었고 OAuth 연결도 했으니 이제 UI를 만들어본다. UI는 당연하게도 html/css로 다 만들면된다. 물론 canvas로 그려도 되고 web-gl로도 그려도 된다. 중요한 것은 electron에서 사용하는 Chromium버전에만 동작하면 되니 다른 브라우저 신경쓰지 않고 맘껏 만들 수 있다는 점이다.
+그동안 잉여력으로 테스트해온 Chromium의 극단을 끄집어낼 기회다. Electron으로 앱을 만들면서 가장 좋았던 점이 이 점"/><meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2227004558B2F00E0E"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Electron 시작하기 (3) - UI"/><meta name="twitter:description" content="Browser도 만들었고 OAuth 연결도 했으니 이제 UI를 만들어본다. UI는 당연하게도 html/css로 다 만들면된다. 물론 canvas로 그려도 되고 web-gl로도 그려도 된다. 중요한 것은 electron에서 사용하는 Chromium버전에만 동작하면 되니 다른 브라우저 신경쓰지 않고 맘껏 만들 수 있다는 점이다.
+그동안 잉여력으로 테스트해온 Chromium의 극단을 끄집어낼 기회다. Electron으로 앱을 만들면서 가장 좋았던 점이 이 점"/><meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2227004558B2F00E0E"/><meta name="next-head-count" content="15"/><link rel="preload" href="/_next/static/css/11ae7950df9656c6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/11ae7950df9656c6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f76bbe1730ea85a1.js" defer=""></script><script src="/_next/static/chunks/494-fa03e5491fc3b3a9.js" defer=""></script><script src="/_next/static/chunks/pages/tistory/%5Bid%5D-571a42114028488a.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_buildManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_ssgManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><main><div class=""><div class="pt-40 pb-36 px-20 border-b-[1px] relative"><h1 class="font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center text-3xl">Electron 시작하기 (3) - UI</h1><div class="flex justify-center"><em class="text-sm"><time dateTime="2017. 2. 26. 11:56">2017. 2. 26. 11:56</time></em></div></div><div class="w-[650px] pt-10 pb-20 mx-auto"><article class="prose"><p><a href="http://blog.joostory.net/463">Browser도 만들었고</a> <a href="http://blog.joostory.net/464">OAuth 연결</a>도 했으니 이제 UI를 만들어본다. UI는 당연하게도 html/css로 다 만들면된다. 물론 canvas로 그려도 되고 web-gl로도 그려도 된다. 중요한 것은 electron에서 사용하는 Chromium버전에만 동작하면 되니 다른 브라우저 신경쓰지 않고 맘껏 만들 수 있다는 점이다.</p>
+<p>그동안 잉여력으로 테스트해온 Chromium의 극단을 끄집어낼 기회다. Electron으로 앱을 만들면서 가장 좋았던 점이 이 점이었다. polyfill도 필요없고 변환작업없이 ES6를 사용할 수도 있다.</p>
+<h2 id="react">React</h2>
+<p>여러 UI 라이브러리 중에서 <a href="http://reactjs.com">React</a>를 선택했다. 이전에 사용해봐서 익숙하기도 하고 사용자가 많아서 귀찮은 작업을 대신해 줄 외부 라이브러리도 많다. 초반에 webpack2 설정하는 것이 조금 귀찮지만 그 부분만 잘해두면 Component를 쌓아가면서 개발하기 좋다고 생각한다.</p>
+<pre><code>class Blog extends Component {
+
+  render() {
+    const { blog, posts, postContent } = this.props
+
+    return (
+      &lt;div&gt;
+        &lt;Sidebar blog={blog} posts={posts} /&gt;
+        &lt;Content blog={blog} post={postContent} /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre><p>Sidebar, Content로 화면을 나누고 Sidebar에는 post list, Content에는 본문과 에디터를 넣었다.</p>
+<h2 id="redux-ipc">Redux, ipc</h2>
+<p>react의 state를 관리하기 편하게 도와주는 <a href="http://redux.js.org">redux</a>가 있다. Component가 state를 관리하는 대신 reducer가 state를 관리하고 Component는 prop로 데이터를 받아서 변경이 되면 dispatch만 해주면 된다. 여기에 ipc를 사용하게 되면 이 과정이 더 편해진다. 더이상 Component는 서버에 데이터를 받아와서 reducer에 전달해줄 필요가 없다. 데이터 요청만 하고 값을 받아서 dispatch 하는 것은 최상위 Component에서 몰아서 하면 된다.</p>
+<pre><code>ipcRenderer.on(&quot;receive-blog-info&quot;, (e, info) =&gt; {
+  store.dispatch(actions.receiveBlog(info))
+  store.dispatch(actions.resetPosts())
+  store.dispatch(actions.receivePostContent(null))
+})
+
+ipcRenderer.on(&quot;receive-posts&quot;, (e, posts) =&gt; {
+  store.dispatch(actions.receivePosts(posts))
+})
+
+ipcRenderer.on(&quot;receive-post-content&quot;, (e, postContent) =&gt; {
+  store.dispatch(actions.receivePostContent(postContent))
+})
+</code></pre><h2 id="material-ui">material-ui</h2>
+<p>UI에서 가장 중요한 것. 바로 디자인이다. 특히 앱을 만드는 것이니까 네이티브 Component같은 느낌을 줄 디자인이 필요하다. Chromium은 기본적으로 <a href="https://material.io">material ui</a>를 사용하니 material ui를 사용하면 잘 맞을 것 같다. react용으로 잘 만들어진 <a href="http://www.material-ui.com">material-ui 라이브러리</a>가 있다.</p>
+<pre><code>&lt;List&gt;
+  {posts.map(item =&gt;
+    &lt;ListItem
+      key={item.postId}
+      primaryText={item.title}
+      secondaryText={item.date}
+      onClick={e =&gt; {this.handleSelectPost(item.postId)}}
+      /&gt;
+  )}
+&lt;/List&gt;
+</code></pre><p>List, ListItem 같은 편리한 Component가 다수 있다. 그리고 Icon도 제공을 하고 있어서 버튼만들 때도 참 편하다.</p>
+<hr>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/2227004558B2F00E0E" alt=""></p>
+<p>이렇게 앱이 대략의 모양새를 갖추게 되었다. 이제 다음차례는 packaging 이다.</p>
+            </article></div></div></main></div><footer class="bg-slate-100 border-t border-accent-2 mt-6"><div class="py-4 flex flex-col items-center justify-center text-xs text-slate-500"><a href="https://twitter.com/@JooStory">@JooStory</a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"465","date":"2017. 2. 26. 11:56","title":"Electron 시작하기 (3) - UI","content":"\u003cp\u003e\u003ca href=\"http://blog.joostory.net/463\"\u003eBrowser도 만들었고\u003c/a\u003e \u003ca href=\"http://blog.joostory.net/464\"\u003eOAuth 연결\u003c/a\u003e도 했으니 이제 UI를 만들어본다. UI는 당연하게도 html/css로 다 만들면된다. 물론 canvas로 그려도 되고 web-gl로도 그려도 된다. 중요한 것은 electron에서 사용하는 Chromium버전에만 동작하면 되니 다른 브라우저 신경쓰지 않고 맘껏 만들 수 있다는 점이다.\u003c/p\u003e\n\u003cp\u003e그동안 잉여력으로 테스트해온 Chromium의 극단을 끄집어낼 기회다. Electron으로 앱을 만들면서 가장 좋았던 점이 이 점이었다. polyfill도 필요없고 변환작업없이 ES6를 사용할 수도 있다.\u003c/p\u003e\n\u003ch2 id=\"react\"\u003eReact\u003c/h2\u003e\n\u003cp\u003e여러 UI 라이브러리 중에서 \u003ca href=\"http://reactjs.com\"\u003eReact\u003c/a\u003e를 선택했다. 이전에 사용해봐서 익숙하기도 하고 사용자가 많아서 귀찮은 작업을 대신해 줄 외부 라이브러리도 많다. 초반에 webpack2 설정하는 것이 조금 귀찮지만 그 부분만 잘해두면 Component를 쌓아가면서 개발하기 좋다고 생각한다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eclass Blog extends Component {\n\n  render() {\n    const { blog, posts, postContent } = this.props\n\n    return (\n      \u0026lt;div\u0026gt;\n        \u0026lt;Sidebar blog={blog} posts={posts} /\u0026gt;\n        \u0026lt;Content blog={blog} post={postContent} /\u0026gt;\n      \u0026lt;/div\u0026gt;\n    )\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003eSidebar, Content로 화면을 나누고 Sidebar에는 post list, Content에는 본문과 에디터를 넣었다.\u003c/p\u003e\n\u003ch2 id=\"redux-ipc\"\u003eRedux, ipc\u003c/h2\u003e\n\u003cp\u003ereact의 state를 관리하기 편하게 도와주는 \u003ca href=\"http://redux.js.org\"\u003eredux\u003c/a\u003e가 있다. Component가 state를 관리하는 대신 reducer가 state를 관리하고 Component는 prop로 데이터를 받아서 변경이 되면 dispatch만 해주면 된다. 여기에 ipc를 사용하게 되면 이 과정이 더 편해진다. 더이상 Component는 서버에 데이터를 받아와서 reducer에 전달해줄 필요가 없다. 데이터 요청만 하고 값을 받아서 dispatch 하는 것은 최상위 Component에서 몰아서 하면 된다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eipcRenderer.on(\u0026quot;receive-blog-info\u0026quot;, (e, info) =\u0026gt; {\n  store.dispatch(actions.receiveBlog(info))\n  store.dispatch(actions.resetPosts())\n  store.dispatch(actions.receivePostContent(null))\n})\n\nipcRenderer.on(\u0026quot;receive-posts\u0026quot;, (e, posts) =\u0026gt; {\n  store.dispatch(actions.receivePosts(posts))\n})\n\nipcRenderer.on(\u0026quot;receive-post-content\u0026quot;, (e, postContent) =\u0026gt; {\n  store.dispatch(actions.receivePostContent(postContent))\n})\n\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\"material-ui\"\u003ematerial-ui\u003c/h2\u003e\n\u003cp\u003eUI에서 가장 중요한 것. 바로 디자인이다. 특히 앱을 만드는 것이니까 네이티브 Component같은 느낌을 줄 디자인이 필요하다. Chromium은 기본적으로 \u003ca href=\"https://material.io\"\u003ematerial ui\u003c/a\u003e를 사용하니 material ui를 사용하면 잘 맞을 것 같다. react용으로 잘 만들어진 \u003ca href=\"http://www.material-ui.com\"\u003ematerial-ui 라이브러리\u003c/a\u003e가 있다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;List\u0026gt;\n  {posts.map(item =\u0026gt;\n    \u0026lt;ListItem\n      key={item.postId}\n      primaryText={item.title}\n      secondaryText={item.date}\n      onClick={e =\u0026gt; {this.handleSelectPost(item.postId)}}\n      /\u0026gt;\n  )}\n\u0026lt;/List\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003eList, ListItem 같은 편리한 Component가 다수 있다. 그리고 Icon도 제공을 하고 있어서 버튼만들 때도 참 편하다.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://t1.daumcdn.net/cfile/tistory/2227004558B2F00E0E\" alt=\"\"\u003e\u003c/p\u003e\n\u003cp\u003e이렇게 앱이 대략의 모양새를 갖추게 되었다. 이제 다음차례는 packaging 이다.\u003c/p\u003e\n            ","summary":"Browser도 만들었고 OAuth 연결도 했으니 이제 UI를 만들어본다. UI는 당연하게도 html/css로 다 만들면된다. 물론 canvas로 그려도 되고 web-gl로도 그려도 된다. 중요한 것은 electron에서 사용하는 Chromium버전에만 동작하면 되니 다른 브라우저 신경쓰지 않고 맘껏 만들 수 있다는 점이다.\n그동안 잉여력으로 테스트해온 Chromium의 극단을 끄집어낼 기회다. Electron으로 앱을 만들면서 가장 좋았던 점이 이 점","image":"https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2\u0026fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2227004558B2F00E0E"}},"__N_SSG":true},"page":"/tistory/[id]","query":{"id":"465"},"buildId":"k2SjylS4DhAPzPoZgQ49x","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

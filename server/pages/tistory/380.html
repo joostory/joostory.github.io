@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="ko"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="JooStory.net"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><link rel="canonical" href="https://blog.joostory.net/380"/><title>티스토리 치환자 주의사항</title><meta property="og:type" content="article"/><meta property="og:title" content="티스토리 치환자 주의사항"/><meta property="og:description" content="티스토리에는 많은 치환자가 사용된다. 각 치환자의 특징과 주의할 점을 정리해보려고 한다.
+
+s_t3
+
+s_t3은 티스토리 가이드에 다음과 같이 정의되어 있다.
+
+자바스크립트를 지정해줄 영역을 선언하기 위해서 &amp;lt;body&amp;gt;안에 &amp;lt;s_t3&amp;gt;&amp;lt;/s_t3&amp;gt;를 넣어줘야 합니다.
+
+여기서 말하는 자바스크립트는 티스토리 기능이 동작하도록 하는 스크립트이다. 실제로 s_t3을 넣은 영역 제일 상위에 다음의 스크립트가 추가된다. 티스토리 "/><meta property="og:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="티스토리 치환자 주의사항"/><meta name="twitter:description" content="티스토리에는 많은 치환자가 사용된다. 각 치환자의 특징과 주의할 점을 정리해보려고 한다.
+
+s_t3
+
+s_t3은 티스토리 가이드에 다음과 같이 정의되어 있다.
+
+자바스크립트를 지정해줄 영역을 선언하기 위해서 &amp;lt;body&amp;gt;안에 &amp;lt;s_t3&amp;gt;&amp;lt;/s_t3&amp;gt;를 넣어줘야 합니다.
+
+여기서 말하는 자바스크립트는 티스토리 기능이 동작하도록 하는 스크립트이다. 실제로 s_t3을 넣은 영역 제일 상위에 다음의 스크립트가 추가된다. 티스토리 "/><meta property="twitter:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="next-head-count" content="15"/><link rel="preload" href="/_next/static/css/11ae7950df9656c6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/11ae7950df9656c6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f76bbe1730ea85a1.js" defer=""></script><script src="/_next/static/chunks/494-fa03e5491fc3b3a9.js" defer=""></script><script src="/_next/static/chunks/pages/tistory/%5Bid%5D-571a42114028488a.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_buildManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_ssgManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><main><div class=""><div class="pt-40 pb-36 px-20 border-b-[1px] relative"><h1 class="font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center text-3xl">티스토리 치환자 주의사항</h1><div class="flex justify-center"><em class="text-sm"><time dateTime="2015. 6. 30. 18:00">2015. 6. 30. 18:00</time></em></div></div><div class="w-[650px] pt-10 pb-20 mx-auto"><article class="prose"><p>티스토리에는 많은 치환자가 사용된다. 각 치환자의 특징과 주의할 점을 정리해보려고 한다.</p>
+
+<h2><code>s_t3</code></h2>
+
+<p><code>s_t3</code>은 티스토리 가이드에 다음과 같이 정의되어 있다.</p>
+
+<blockquote><p>자바스크립트를 지정해줄 영역을 선언하기 위해서 <code>&lt;body&gt;</code>안에 <code>&lt;s_t3&gt;&lt;/s_t3&gt;</code>를 넣어줘야 합니다.</p></blockquote>
+
+<p>여기서 말하는 자바스크립트는 티스토리 기능이 동작하도록 하는 스크립트이다. 실제로 <code>s_t3</code>을 넣은 영역 제일 상위에 다음의 스크립트가 추가된다. 티스토리 주인이냐 아니냐에 따라 조금 다른데 주인일 경우 스크립트가 더 길다. 아래는 손님에게 추가되는 내용이다. 이 스크립트가 없을경우 댓글 작성이나 단축키 등이 동작하지 않는다. 그 기능을 사용하지 않을 것이라면 없애도 된다.</p>
+
+<pre class="prettyprint"><code>&lt;script type="text/javascript"&gt;
+	function secondaryDomainLogin(authData) {
+		if (!authData) {
+			return;
+		}
+
+		var request = new HTTPRequest("POST", '/api/secondaryDomain/');
+		request.async = false;
+		request.onSuccess = function() {
+			window.location.reload();
+		};
+		request.onVerify = function() {
+			try {
+				var result = eval("(" + this.getText() + ")");
+				return (result.error == false)
+			}
+			catch (e) {
+				return false;
+			}
+		};
+		request.send('authData=' + encodeURIComponent(authData));
+	}
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://www.tistory.com/api/secondaryDomain/?callback=secondaryDomainLogin&amp;amp;dummy=1727273845"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+	var TOP_SSL_URL = 'https://www.tistory.com';
+
+	function processShortcut(event) {
+			if (isIE)
+		{
+			event = window.event;
+			event.target = event.srcElement;
+		}
+
+		if (event.altKey || event.ctrlKey || event.metaKey)
+			return;
+		switch (event.target.nodeName) {
+			case "INPUT":
+			case "SELECT":
+			case "TEXTAREA":
+				return;
+		}
+		switch (event.keyCode) {
+			case 81: //Q
+
+				window.location = "/admin";
+				break;
+			case 83: //S
+				window.location = "/378";
+				break;
+			case 90: //Z
+				window.location = "#recentEntries";
+				break;
+			case 88: //X
+				window.location = "#recentComments";
+				break;
+			case 67: //C
+				window.location = "#recentTrackback";
+				break;
+		}
+	}
+	document.onkeydown = processShortcut;
+
+	function addComment(caller, entryId) {
+		var oForm = findFormObject(caller);
+		if (!oForm)
+			return false;
+		var request = new HTTPRequest("POST", oForm.action);
+		request.onSuccess = function () {
+			if(entryId == 0)
+				window.location = blogURL + "/guestbook";
+			else {
+				document.getElementById("entry" + entryId + "Comment").innerHTML = this.getText("/response/commentBlock");
+				if(document.getElementById("recentComments"))
+					document.getElementById("recentComments").innerHTML = this.getText("/response/recentCommentBlock");
+				if(document.getElementById("commentCount" + entryId))
+					document.getElementById("commentCount" + entryId).innerHTML = this.getText("/response/commentView");
+				if(document.getElementById("commentCountOnRecentEntries" + entryId))
+					document.getElementById("commentCountOnRecentEntries" + entryId).innerHTML = "(" + this.getText("/response/commentCount") + ")";
+			}
+			if(typeof window.needCommentCaptcha !== "undefined"){
+				captchaPlugin.init('complete');
+			}
+		}
+		request.onError = function() {
+			var description = this.getText("/response/description");
+			if (description) { alert(description); }
+		}
+		var queryString = "key=tistory";
+		var captchaInput = document.getElementById('inputCaptcha');
+		if (oForm["name"])
+			queryString += "&amp;name=" + encodeURIComponent(oForm["name"].value);
+		if (oForm["password"])
+			queryString += "&amp;password=" + encodeURIComponent(oForm["password"].value);
+		if (oForm["homepage"])
+			queryString += "&amp;homepage=" + encodeURIComponent(oForm["homepage"].value);
+		if (oForm["secret"] &amp;&amp; oForm["secret"].checked)
+			queryString += "&amp;secret=1";
+		if (oForm["comment"])
+			queryString += "&amp;comment=" + encodeURIComponent(oForm["comment"].value);
+		if (captchaInput) {
+			if (!captchaInput.value) {
+				alert('그림문자가 입력되지 않았습니다.');
+				return false;
+			}
+			queryString += "&amp;captcha=" + encodeURIComponent(captchaInput.value);
+		}
+		request.send(queryString);
+	}
+	function commentRequireLogin() {
+		if(confirm("'JooStory Blog' 블로그에 댓글을 남기시려면 티스토리에 로그인하셔야 합니다. \n 지금 로그인하시겠습니까?")) {
+			window.location = "https://www.tistory.com/login/?requestURI=http%3A%2F%2Fblog.joostory.net%2F379";
+		} else {
+			window.focus();
+		}
+	}
+	function commentObserverForAuth(evetObj) {
+		var reex = /name|password|homepage|secret|comment/;
+		if (isIE)
+			var	name = evetObj.srcElement.name
+		else
+			var	name = evetObj.target.name
+		if(reex.test(name) &amp;&amp; !(new RegExp("^entry\\d+password$").test(name))) {
+			commentRequireLogin();
+		}
+	}
+
+	STD.addEventListener(document);
+	document.addEventListener("click", commentObserverForAuth, false);
+	var openWindow='';
+	function alignCenter(win,width,height) {
+		if(navigator.userAgent.indexOf("Chrome") == -1)
+			win.moveTo(screen.width/2-width/2,screen.height/2-height/2);
+	}
+
+	function deleteComment(id) {
+		var width = 450;
+		var height = 360;
+				try { openWindow.close(); } catch(e) { }
+				openWindow = window.open("/comment/delete/" + id, "tatter", "width="+width+",height="+height+",location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+		openWindow.focus();
+		alignCenter(openWindow,width,height);
+	}
+
+	function commentComment(parent, guestbookPage) {
+		var width = 450;
+		var height = 360;
+				try { openWindow.close(); } catch(e) { }
+				openWindow = window.open("/comment/comment/" + parent + (guestbookPage ? "?guestbookPage=" + guestbookPage: ""), "tatter", "width="+width+",height="+height+",location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+		openWindow.focus();
+		alignCenter(openWindow,width,height);
+	}
+
+	function editEntry(parent,child) {
+		var width =  1169;
+		var height = 600;
+		if(openWindow != '') openWindow.close();
+		openWindow = window.open("/admin/entry/edit/" + parent + "?popupEditor&amp;returnURL=CLOSEME","tatter", "width="+1169+",height="+600+",location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0");
+		openWindow.focus();
+		alignCenter(openWindow,width,height);
+	}
+
+	function guestbookComment(parent) {
+		var width = 450;
+		var height = 360;
+				try { openWindow.close(); } catch(e) { }
+				openWindow = window.open("/comment/comment/" + parent, "tatter", "width="+width+",height="+height+",location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+		openWindow.focus();
+		alignCenter(openWindow,width,height);
+	}
+
+	function sendTrackback(id) {
+		var width = 700;
+		var height = 500;
+				try { openWindow.close(); } catch(e) { }
+				openWindow = window.open("/trackback/send/" + id, "tatter", "width=580,height=400,location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0");
+				openWindow.focus();
+		alignCenter(openWindow,width,height);
+	}
+
+	function deleteTrackback(id,entryId) {
+		if (confirm("트랙백을 삭제하기 위해서는 로그인이 필요합니다.\n로그인 하시겠습니까?\t")) {
+			window.location = "https://www.tistory.com/login/";
+			return false;
+		} else {
+			return false;
+		}
+	}
+
+	function reloadEntry(id) {
+		var password = document.getElementById("entry" + id + "password");
+		if (!password)
+			return;
+		document.cookie = "GUEST_PASSWORD=" + encodeURIComponent(password.value) + ";path=";
+
+		window.location.href = window.location.href;
+	}
+	loadedComments = new Array();
+	loadedTrackbacks = new Array();
+	function viewTrigger(id, category, categoryId) {
+		var request = new HTTPRequest("GET", "/"+category+"/view/" + id);
+		var target = document.getElementById('entry'+id+(category == 'comment' ? 'Comment' : 'Trackback'));
+		if(target == null)
+			return false;
+		request.onSuccess = function() {
+			target.innerHTML = this.getText("/response/result");
+			target.style.display = 'block';
+			highlight();
+			category == 'comment' ? loadedComments[id] = true : loadedTrackbacks[id] = true;
+			if(categoryId &gt; -1)
+				location = location.toString();
+			if(category == 'trackback') {
+				var holder = document.getElementById('TrackbackCopyHolder' + id);
+				if(holder) {
+					holder.innerHTML = AC_FL_RunContentNotWriteGetString(
+						'src','https://s1.daumcdn.net/cfs.tistory/resource/620/blog/script/copyTrackback',
+						'Flashvars','url=http://blog.joostory.net/trackback/' + id + '&amp;mode=whiteButton',
+						'width','29',
+						'height','18',
+						'id', 'TrackbackCopyButton' + id,
+						'wmode','transparent',
+						'allowScriptAccess','always',
+						'type','application/x-shockwave-flash',
+						'pluginspage','http://www.macromedia.com/go/getflashplayer'
+					);
+				}
+			}
+			if(typeof window.needCommentCaptcha !== "undefined"){
+				captchaPlugin.init();
+			}
+		}
+		request.onError = function() {
+			alert('실패 했습니다');
+		}
+		request.send();
+	}
+	function highlight() {
+		var hash = new RegExp("^#(comment\\d+)").exec(window.location.hash);
+		if(hash &amp;&amp; (el = document.getElementById(hash[1])))
+			highlightElement(hash[1], 0, el.style.backgroundColor);
+	}
+	function highlightElement(id, amount, origColor) {
+		var el = document.getElementById(id);
+		if (!el) {
+			return;
+		}
+		el.style.backgroundColor = amount % 2 ? "#FFFF44" : origColor;
+		if (++amount &lt; 7) {
+			setTimeout("highlightElement('" + id + "', " + amount + ", '" + origColor + "')", 200);
+		}
+	}
+	function toggleLayerForEntry(id, category, categoryId, mode) {
+		if((category == 'comment' ? loadedComments[id] : loadedTrackbacks[id])) {
+			try {
+				var obj = document.getElementById('entry'+id+(category == 'comment' ? 'Comment' : 'Trackback'));
+				if(mode == undefined)
+					obj.style.display = (obj.style.display == "none") ? "block" : "none";
+				else
+					obj.style.display = (mode == 'show') ? "block" : "none";
+			} catch (e) {
+
+			}
+			return true;
+		} else {
+			if(categoryId) {
+				viewTrigger(id,category, categoryId);
+			} else {
+				viewTrigger(id,category, -1);
+			}
+		}
+	}
+	function ObserverForAnchor(evetObj) {
+		var lo = location.toString();
+		var queryString = lo.substr(lo.lastIndexOf('/')+1);
+		if(queryString.indexOf('#')&gt;-1) {
+			var qsElements = queryString.split('#');
+			if(qsElements[1].indexOf('comment')&gt;-1) {
+				var category = 'comment';
+			} else if(qsElements[1].indexOf('trackback')&gt;-1) {
+				var category = 'trackback';
+			}
+			if(category) {
+				entryid = qsElements[0];
+				categoryId = qsElements[1].substr(category.length);
+				toggleLayerForEntry(entryid,category,categoryId, 'show');
+			}
+		}
+	}
+
+	STD.addEventListener(window);
+	window.addEventListener("load", ObserverForAnchor, false);
+//]]&gt;
+&lt;/script&gt;
+&lt;div style="margin:0px; padding:0px; border:none; background:none; float:none; clear:none; z-index:0"&gt;&lt;/div&gt;</code></pre>
+
+<h2>header</h2>
+
+<h3><em>blog</em>menu_</h3>
+
+<p><code>[#_blog_menu_#]</code>는 다음으로 치환된다.</p>
+
+<pre class="prettyprint"><code>&lt;ul&gt;	&lt;li class="t_menu_home first"&gt;
+		&lt;a href="/"&gt;홈&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="t_menu_tag"&gt;
+		&lt;a href="/tag"&gt;태그&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="t_menu_medialog"&gt;
+		&lt;a href="/media"&gt;미디어로그&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="t_menu_location"&gt;
+		&lt;a href="/location"&gt;위치로그&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="t_menu_guestbook last"&gt;
+		&lt;a href="/guestbook"&gt;방명록&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<h2>content</h2>
+
+<h3>검색</h3>
+
+<p>티스토리의 검색은 parameter가 아닌 /search/[text] 같은 url로 하기 때문에 일반적인 폼으로는 검색을 구현할 수 없다. 따라서 반드시 가이드에 나온 치환자를 사용해야 한다. 가이드에는 onclick에 넣으라고 했지만 false를 return하기때문에 submit 이벤트에 넣어줘도 잘 동작한다.</p>
+
+<h3>태그</h3>
+
+<p><code>[#_tag_label_rep_#]</code>는 다음과 같이 치환된다. 콤마까지 넣어준다. 따라서 다양한 스타일링을 하기에는 무리가 있다.</p>
+
+<pre class="prettyprint"><code>&lt;a href="/tag/angularJs"  rel="tag"&gt;angularJs&lt;/a&gt;,&lt;a href="/tag/handlebars"  rel="tag"&gt;handlebars&lt;/a&gt;</code></pre>
+
+<h3>댓글</h3>
+
+<p><code>[#_rp_rep_id_#]</code> 는 댓글의 고유id인데 hash로 접근하기 위해서 사용한다. 따라서 댓글에 직접 접근을 할 수 있도록 하려면 넣어줘야한다.</p>
+
+<p><code>[#_rp_rep_class_#]</code> 는 글의 성격에 따라 관리자의 댓글은 rp<em>admin, 일반 사용자가 작성한 글은 rp</em>general, 비밀글은 rp_secret 으로 치환된다.</p>
+
+<h4>댓글쓰기</h4>
+
+<p><code>&lt;s_rp_input_form&gt;</code> 는 form 태그를 만든다. class를 따로 지정할 수는 없다.</p>
+
+<p>댓글이 없는 경우 <code>[#_article_rep_rp_link_#]</code>는 댓글을 작성할 수 없다는 메시지를 출력하는 alert으로 치환된다.</p>
+
+<p><code>&lt;s_rp_count&gt;</code> 는 댓글이 2개 이상일 경우에만 원하는 내용을 넣을 수 있다. 2개 미만(0개, 1개)인 경우 "Comment 0" 과 같은 형태로 치환된다.</p>
+
+<h3>paging</h3>
+
+<h4><code>_prev_page_</code>, <code>_next_page_</code></h4>
+
+<p><code>&lt;s_paging&gt;&lt;/s_paging&gt;</code> 내부에 <code>&lt;s_paging_rep&gt;&lt;/s_paging_rep&gt;</code>로 페이지 리스트를 뿌릴 수 있다. 이전 페이지, 다음 페이지로의 이동은 <code>[#_prev_page_#]</code> 등으로 따로 명시해주면 되는데 통째로 <code>href="[prevPageUrl]"</code> 로 변환되니 <code>href="[#_prev_page_#]"</code> 처럼 사용하면 안된다.</p>
+
+<h4><code>s_paging_rep</code></h4>
+
+<p><code>&lt;s_paging_rep&gt;&lt;/s_paging_rep&gt;</code> 는 루프를 돌면서 <code>[#_paging_rep_link_#]</code> 와 <code>[#_paging_rep_link_num_#]</code>를 사용할 수 있도록 해주는데 1~ 100까지의 숫자가 있다고 한다면 "1, 2, 3, 4, ..., 100" 로 출력한다. 근데 문제는 "..." 에 있다. 무조건 <code>&lt;span class="interword"&gt;...&lt;/span&gt;</code> 가 중간에 추가되며 이를 컨트롤 할 수가 없다. li 로 페이징을 구성했다면 다음과 같은 결과를 얻게 된다.</p>
+
+<pre class="prettyprint"><code>&lt;li&gt;&lt;a class="num"&gt;&lt;span class="selected"&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/378" class="num"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/377" class="num"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/376" class="num"&gt;&lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/375" class="num"&gt;&lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;span class="interword"&gt;...&lt;/span&gt;
+&lt;li&gt;&lt;a href="/1" class="num"&gt;&lt;span&gt;378&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</code></pre>
+
+<p>paging에 li를 사용해선 안된다. 이전/다음만 사용하려면 li를 사용해도 된다.</p>
+
+<h4><code>_no_more_prev_</code>, <code>_no_more_next_</code></h4>
+
+<p>이전 글이 없을때 <code>[#_no_more_prev_#]</code>는 <code>no-more-prev</code>로 <code>[#_no_more_next_#]</code>는 <code>no-more-prev</code>로 변환된다. 이 class에 대한 css를 지정해두어야 한다.</p>            </article></div></div></main></div><footer class="bg-slate-100 border-t border-accent-2 mt-6"><div class="py-4 flex flex-col items-center justify-center text-xs text-slate-500"><a href="https://twitter.com/@JooStory">@JooStory</a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"380","date":"2015. 6. 30. 18:00","title":"티스토리 치환자 주의사항","content":"\u003cp\u003e티스토리에는 많은 치환자가 사용된다. 각 치환자의 특징과 주의할 점을 정리해보려고 한다.\u003c/p\u003e\n\n\u003ch2\u003e\u003ccode\u003es_t3\u003c/code\u003e\u003c/h2\u003e\n\n\u003cp\u003e\u003ccode\u003es_t3\u003c/code\u003e은 티스토리 가이드에 다음과 같이 정의되어 있다.\u003c/p\u003e\n\n\u003cblockquote\u003e\u003cp\u003e자바스크립트를 지정해줄 영역을 선언하기 위해서 \u003ccode\u003e\u0026lt;body\u0026gt;\u003c/code\u003e안에 \u003ccode\u003e\u0026lt;s_t3\u0026gt;\u0026lt;/s_t3\u0026gt;\u003c/code\u003e를 넣어줘야 합니다.\u003c/p\u003e\u003c/blockquote\u003e\n\n\u003cp\u003e여기서 말하는 자바스크립트는 티스토리 기능이 동작하도록 하는 스크립트이다. 실제로 \u003ccode\u003es_t3\u003c/code\u003e을 넣은 영역 제일 상위에 다음의 스크립트가 추가된다. 티스토리 주인이냐 아니냐에 따라 조금 다른데 주인일 경우 스크립트가 더 길다. 아래는 손님에게 추가되는 내용이다. 이 스크립트가 없을경우 댓글 작성이나 단축키 등이 동작하지 않는다. 그 기능을 사용하지 않을 것이라면 없애도 된다.\u003c/p\u003e\n\n\u003cpre class=\"prettyprint\"\u003e\u003ccode\u003e\u0026lt;script type=\"text/javascript\"\u0026gt;\n\tfunction secondaryDomainLogin(authData) {\n\t\tif (!authData) {\n\t\t\treturn;\n\t\t}\n\n\t\tvar request = new HTTPRequest(\"POST\", '/api/secondaryDomain/');\n\t\trequest.async = false;\n\t\trequest.onSuccess = function() {\n\t\t\twindow.location.reload();\n\t\t};\n\t\trequest.onVerify = function() {\n\t\t\ttry {\n\t\t\t\tvar result = eval(\"(\" + this.getText() + \")\");\n\t\t\t\treturn (result.error == false)\n\t\t\t}\n\t\t\tcatch (e) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t};\n\t\trequest.send('authData=' + encodeURIComponent(authData));\n\t}\n\u0026lt;/script\u0026gt;\n\u0026lt;script type=\"text/javascript\" src=\"http://www.tistory.com/api/secondaryDomain/?callback=secondaryDomainLogin\u0026amp;amp;dummy=1727273845\"\u0026gt;\u0026lt;/script\u0026gt;\n\n\u0026lt;script type=\"text/javascript\"\u0026gt;\n//\u0026lt;![CDATA[\n\tvar TOP_SSL_URL = 'https://www.tistory.com';\n\n\tfunction processShortcut(event) {\n\t\t\tif (isIE)\n\t\t{\n\t\t\tevent = window.event;\n\t\t\tevent.target = event.srcElement;\n\t\t}\n\n\t\tif (event.altKey || event.ctrlKey || event.metaKey)\n\t\t\treturn;\n\t\tswitch (event.target.nodeName) {\n\t\t\tcase \"INPUT\":\n\t\t\tcase \"SELECT\":\n\t\t\tcase \"TEXTAREA\":\n\t\t\t\treturn;\n\t\t}\n\t\tswitch (event.keyCode) {\n\t\t\tcase 81: //Q\n\n\t\t\t\twindow.location = \"/admin\";\n\t\t\t\tbreak;\n\t\t\tcase 83: //S\n\t\t\t\twindow.location = \"/378\";\n\t\t\t\tbreak;\n\t\t\tcase 90: //Z\n\t\t\t\twindow.location = \"#recentEntries\";\n\t\t\t\tbreak;\n\t\t\tcase 88: //X\n\t\t\t\twindow.location = \"#recentComments\";\n\t\t\t\tbreak;\n\t\t\tcase 67: //C\n\t\t\t\twindow.location = \"#recentTrackback\";\n\t\t\t\tbreak;\n\t\t}\n\t}\n\tdocument.onkeydown = processShortcut;\n\n\tfunction addComment(caller, entryId) {\n\t\tvar oForm = findFormObject(caller);\n\t\tif (!oForm)\n\t\t\treturn false;\n\t\tvar request = new HTTPRequest(\"POST\", oForm.action);\n\t\trequest.onSuccess = function () {\n\t\t\tif(entryId == 0)\n\t\t\t\twindow.location = blogURL + \"/guestbook\";\n\t\t\telse {\n\t\t\t\tdocument.getElementById(\"entry\" + entryId + \"Comment\").innerHTML = this.getText(\"/response/commentBlock\");\n\t\t\t\tif(document.getElementById(\"recentComments\"))\n\t\t\t\t\tdocument.getElementById(\"recentComments\").innerHTML = this.getText(\"/response/recentCommentBlock\");\n\t\t\t\tif(document.getElementById(\"commentCount\" + entryId))\n\t\t\t\t\tdocument.getElementById(\"commentCount\" + entryId).innerHTML = this.getText(\"/response/commentView\");\n\t\t\t\tif(document.getElementById(\"commentCountOnRecentEntries\" + entryId))\n\t\t\t\t\tdocument.getElementById(\"commentCountOnRecentEntries\" + entryId).innerHTML = \"(\" + this.getText(\"/response/commentCount\") + \")\";\n\t\t\t}\n\t\t\tif(typeof window.needCommentCaptcha !== \"undefined\"){\n\t\t\t\tcaptchaPlugin.init('complete');\n\t\t\t}\n\t\t}\n\t\trequest.onError = function() {\n\t\t\tvar description = this.getText(\"/response/description\");\n\t\t\tif (description) { alert(description); }\n\t\t}\n\t\tvar queryString = \"key=tistory\";\n\t\tvar captchaInput = document.getElementById('inputCaptcha');\n\t\tif (oForm[\"name\"])\n\t\t\tqueryString += \"\u0026amp;name=\" + encodeURIComponent(oForm[\"name\"].value);\n\t\tif (oForm[\"password\"])\n\t\t\tqueryString += \"\u0026amp;password=\" + encodeURIComponent(oForm[\"password\"].value);\n\t\tif (oForm[\"homepage\"])\n\t\t\tqueryString += \"\u0026amp;homepage=\" + encodeURIComponent(oForm[\"homepage\"].value);\n\t\tif (oForm[\"secret\"] \u0026amp;\u0026amp; oForm[\"secret\"].checked)\n\t\t\tqueryString += \"\u0026amp;secret=1\";\n\t\tif (oForm[\"comment\"])\n\t\t\tqueryString += \"\u0026amp;comment=\" + encodeURIComponent(oForm[\"comment\"].value);\n\t\tif (captchaInput) {\n\t\t\tif (!captchaInput.value) {\n\t\t\t\talert('그림문자가 입력되지 않았습니다.');\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tqueryString += \"\u0026amp;captcha=\" + encodeURIComponent(captchaInput.value);\n\t\t}\n\t\trequest.send(queryString);\n\t}\n\tfunction commentRequireLogin() {\n\t\tif(confirm(\"'JooStory Blog' 블로그에 댓글을 남기시려면 티스토리에 로그인하셔야 합니다. \\n 지금 로그인하시겠습니까?\")) {\n\t\t\twindow.location = \"https://www.tistory.com/login/?requestURI=http%3A%2F%2Fblog.joostory.net%2F379\";\n\t\t} else {\n\t\t\twindow.focus();\n\t\t}\n\t}\n\tfunction commentObserverForAuth(evetObj) {\n\t\tvar reex = /name|password|homepage|secret|comment/;\n\t\tif (isIE)\n\t\t\tvar\tname = evetObj.srcElement.name\n\t\telse\n\t\t\tvar\tname = evetObj.target.name\n\t\tif(reex.test(name) \u0026amp;\u0026amp; !(new RegExp(\"^entry\\\\d+password$\").test(name))) {\n\t\t\tcommentRequireLogin();\n\t\t}\n\t}\n\n\tSTD.addEventListener(document);\n\tdocument.addEventListener(\"click\", commentObserverForAuth, false);\n\tvar openWindow='';\n\tfunction alignCenter(win,width,height) {\n\t\tif(navigator.userAgent.indexOf(\"Chrome\") == -1)\n\t\t\twin.moveTo(screen.width/2-width/2,screen.height/2-height/2);\n\t}\n\n\tfunction deleteComment(id) {\n\t\tvar width = 450;\n\t\tvar height = 360;\n\t\t\t\ttry { openWindow.close(); } catch(e) { }\n\t\t\t\topenWindow = window.open(\"/comment/delete/\" + id, \"tatter\", \"width=\"+width+\",height=\"+height+\",location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0\");\n\t\topenWindow.focus();\n\t\talignCenter(openWindow,width,height);\n\t}\n\n\tfunction commentComment(parent, guestbookPage) {\n\t\tvar width = 450;\n\t\tvar height = 360;\n\t\t\t\ttry { openWindow.close(); } catch(e) { }\n\t\t\t\topenWindow = window.open(\"/comment/comment/\" + parent + (guestbookPage ? \"?guestbookPage=\" + guestbookPage: \"\"), \"tatter\", \"width=\"+width+\",height=\"+height+\",location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0\");\n\t\topenWindow.focus();\n\t\talignCenter(openWindow,width,height);\n\t}\n\n\tfunction editEntry(parent,child) {\n\t\tvar width =  1169;\n\t\tvar height = 600;\n\t\tif(openWindow != '') openWindow.close();\n\t\topenWindow = window.open(\"/admin/entry/edit/\" + parent + \"?popupEditor\u0026amp;returnURL=CLOSEME\",\"tatter\", \"width=\"+1169+\",height=\"+600+\",location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0\");\n\t\topenWindow.focus();\n\t\talignCenter(openWindow,width,height);\n\t}\n\n\tfunction guestbookComment(parent) {\n\t\tvar width = 450;\n\t\tvar height = 360;\n\t\t\t\ttry { openWindow.close(); } catch(e) { }\n\t\t\t\topenWindow = window.open(\"/comment/comment/\" + parent, \"tatter\", \"width=\"+width+\",height=\"+height+\",location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0\");\n\t\topenWindow.focus();\n\t\talignCenter(openWindow,width,height);\n\t}\n\n\tfunction sendTrackback(id) {\n\t\tvar width = 700;\n\t\tvar height = 500;\n\t\t\t\ttry { openWindow.close(); } catch(e) { }\n\t\t\t\topenWindow = window.open(\"/trackback/send/\" + id, \"tatter\", \"width=580,height=400,location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0\");\n\t\t\t\topenWindow.focus();\n\t\talignCenter(openWindow,width,height);\n\t}\n\n\tfunction deleteTrackback(id,entryId) {\n\t\tif (confirm(\"트랙백을 삭제하기 위해서는 로그인이 필요합니다.\\n로그인 하시겠습니까?\\t\")) {\n\t\t\twindow.location = \"https://www.tistory.com/login/\";\n\t\t\treturn false;\n\t\t} else {\n\t\t\treturn false;\n\t\t}\n\t}\n\n\tfunction reloadEntry(id) {\n\t\tvar password = document.getElementById(\"entry\" + id + \"password\");\n\t\tif (!password)\n\t\t\treturn;\n\t\tdocument.cookie = \"GUEST_PASSWORD=\" + encodeURIComponent(password.value) + \";path=\";\n\n\t\twindow.location.href = window.location.href;\n\t}\n\tloadedComments = new Array();\n\tloadedTrackbacks = new Array();\n\tfunction viewTrigger(id, category, categoryId) {\n\t\tvar request = new HTTPRequest(\"GET\", \"/\"+category+\"/view/\" + id);\n\t\tvar target = document.getElementById('entry'+id+(category == 'comment' ? 'Comment' : 'Trackback'));\n\t\tif(target == null)\n\t\t\treturn false;\n\t\trequest.onSuccess = function() {\n\t\t\ttarget.innerHTML = this.getText(\"/response/result\");\n\t\t\ttarget.style.display = 'block';\n\t\t\thighlight();\n\t\t\tcategory == 'comment' ? loadedComments[id] = true : loadedTrackbacks[id] = true;\n\t\t\tif(categoryId \u0026gt; -1)\n\t\t\t\tlocation = location.toString();\n\t\t\tif(category == 'trackback') {\n\t\t\t\tvar holder = document.getElementById('TrackbackCopyHolder' + id);\n\t\t\t\tif(holder) {\n\t\t\t\t\tholder.innerHTML = AC_FL_RunContentNotWriteGetString(\n\t\t\t\t\t\t'src','https://s1.daumcdn.net/cfs.tistory/resource/620/blog/script/copyTrackback',\n\t\t\t\t\t\t'Flashvars','url=http://blog.joostory.net/trackback/' + id + '\u0026amp;mode=whiteButton',\n\t\t\t\t\t\t'width','29',\n\t\t\t\t\t\t'height','18',\n\t\t\t\t\t\t'id', 'TrackbackCopyButton' + id,\n\t\t\t\t\t\t'wmode','transparent',\n\t\t\t\t\t\t'allowScriptAccess','always',\n\t\t\t\t\t\t'type','application/x-shockwave-flash',\n\t\t\t\t\t\t'pluginspage','http://www.macromedia.com/go/getflashplayer'\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t}\n\t\t\tif(typeof window.needCommentCaptcha !== \"undefined\"){\n\t\t\t\tcaptchaPlugin.init();\n\t\t\t}\n\t\t}\n\t\trequest.onError = function() {\n\t\t\talert('실패 했습니다');\n\t\t}\n\t\trequest.send();\n\t}\n\tfunction highlight() {\n\t\tvar hash = new RegExp(\"^#(comment\\\\d+)\").exec(window.location.hash);\n\t\tif(hash \u0026amp;\u0026amp; (el = document.getElementById(hash[1])))\n\t\t\thighlightElement(hash[1], 0, el.style.backgroundColor);\n\t}\n\tfunction highlightElement(id, amount, origColor) {\n\t\tvar el = document.getElementById(id);\n\t\tif (!el) {\n\t\t\treturn;\n\t\t}\n\t\tel.style.backgroundColor = amount % 2 ? \"#FFFF44\" : origColor;\n\t\tif (++amount \u0026lt; 7) {\n\t\t\tsetTimeout(\"highlightElement('\" + id + \"', \" + amount + \", '\" + origColor + \"')\", 200);\n\t\t}\n\t}\n\tfunction toggleLayerForEntry(id, category, categoryId, mode) {\n\t\tif((category == 'comment' ? loadedComments[id] : loadedTrackbacks[id])) {\n\t\t\ttry {\n\t\t\t\tvar obj = document.getElementById('entry'+id+(category == 'comment' ? 'Comment' : 'Trackback'));\n\t\t\t\tif(mode == undefined)\n\t\t\t\t\tobj.style.display = (obj.style.display == \"none\") ? \"block\" : \"none\";\n\t\t\t\telse\n\t\t\t\t\tobj.style.display = (mode == 'show') ? \"block\" : \"none\";\n\t\t\t} catch (e) {\n\n\t\t\t}\n\t\t\treturn true;\n\t\t} else {\n\t\t\tif(categoryId) {\n\t\t\t\tviewTrigger(id,category, categoryId);\n\t\t\t} else {\n\t\t\t\tviewTrigger(id,category, -1);\n\t\t\t}\n\t\t}\n\t}\n\tfunction ObserverForAnchor(evetObj) {\n\t\tvar lo = location.toString();\n\t\tvar queryString = lo.substr(lo.lastIndexOf('/')+1);\n\t\tif(queryString.indexOf('#')\u0026gt;-1) {\n\t\t\tvar qsElements = queryString.split('#');\n\t\t\tif(qsElements[1].indexOf('comment')\u0026gt;-1) {\n\t\t\t\tvar category = 'comment';\n\t\t\t} else if(qsElements[1].indexOf('trackback')\u0026gt;-1) {\n\t\t\t\tvar category = 'trackback';\n\t\t\t}\n\t\t\tif(category) {\n\t\t\t\tentryid = qsElements[0];\n\t\t\t\tcategoryId = qsElements[1].substr(category.length);\n\t\t\t\ttoggleLayerForEntry(entryid,category,categoryId, 'show');\n\t\t\t}\n\t\t}\n\t}\n\n\tSTD.addEventListener(window);\n\twindow.addEventListener(\"load\", ObserverForAnchor, false);\n//]]\u0026gt;\n\u0026lt;/script\u0026gt;\n\u0026lt;div style=\"margin:0px; padding:0px; border:none; background:none; float:none; clear:none; z-index:0\"\u0026gt;\u0026lt;/div\u0026gt;\u003c/code\u003e\u003c/pre\u003e\n\n\u003ch2\u003eheader\u003c/h2\u003e\n\n\u003ch3\u003e\u003cem\u003eblog\u003c/em\u003emenu_\u003c/h3\u003e\n\n\u003cp\u003e\u003ccode\u003e[#_blog_menu_#]\u003c/code\u003e는 다음으로 치환된다.\u003c/p\u003e\n\n\u003cpre class=\"prettyprint\"\u003e\u003ccode\u003e\u0026lt;ul\u0026gt;\t\u0026lt;li class=\"t_menu_home first\"\u0026gt;\n\t\t\u0026lt;a href=\"/\"\u0026gt;홈\u0026lt;/a\u0026gt;\n\t\u0026lt;/li\u0026gt;\n\t\u0026lt;li class=\"t_menu_tag\"\u0026gt;\n\t\t\u0026lt;a href=\"/tag\"\u0026gt;태그\u0026lt;/a\u0026gt;\n\t\u0026lt;/li\u0026gt;\n\t\u0026lt;li class=\"t_menu_medialog\"\u0026gt;\n\t\t\u0026lt;a href=\"/media\"\u0026gt;미디어로그\u0026lt;/a\u0026gt;\n\t\u0026lt;/li\u0026gt;\n\t\u0026lt;li class=\"t_menu_location\"\u0026gt;\n\t\t\u0026lt;a href=\"/location\"\u0026gt;위치로그\u0026lt;/a\u0026gt;\n\t\u0026lt;/li\u0026gt;\n\t\u0026lt;li class=\"t_menu_guestbook last\"\u0026gt;\n\t\t\u0026lt;a href=\"/guestbook\"\u0026gt;방명록\u0026lt;/a\u0026gt;\n\t\u0026lt;/li\u0026gt;\n\u0026lt;/ul\u0026gt;\u003c/code\u003e\u003c/pre\u003e\n\n\u003ch2\u003econtent\u003c/h2\u003e\n\n\u003ch3\u003e검색\u003c/h3\u003e\n\n\u003cp\u003e티스토리의 검색은 parameter가 아닌 /search/[text] 같은 url로 하기 때문에 일반적인 폼으로는 검색을 구현할 수 없다. 따라서 반드시 가이드에 나온 치환자를 사용해야 한다. 가이드에는 onclick에 넣으라고 했지만 false를 return하기때문에 submit 이벤트에 넣어줘도 잘 동작한다.\u003c/p\u003e\n\n\u003ch3\u003e태그\u003c/h3\u003e\n\n\u003cp\u003e\u003ccode\u003e[#_tag_label_rep_#]\u003c/code\u003e는 다음과 같이 치환된다. 콤마까지 넣어준다. 따라서 다양한 스타일링을 하기에는 무리가 있다.\u003c/p\u003e\n\n\u003cpre class=\"prettyprint\"\u003e\u003ccode\u003e\u0026lt;a href=\"/tag/angularJs\"  rel=\"tag\"\u0026gt;angularJs\u0026lt;/a\u0026gt;,\u0026lt;a href=\"/tag/handlebars\"  rel=\"tag\"\u0026gt;handlebars\u0026lt;/a\u0026gt;\u003c/code\u003e\u003c/pre\u003e\n\n\u003ch3\u003e댓글\u003c/h3\u003e\n\n\u003cp\u003e\u003ccode\u003e[#_rp_rep_id_#]\u003c/code\u003e 는 댓글의 고유id인데 hash로 접근하기 위해서 사용한다. 따라서 댓글에 직접 접근을 할 수 있도록 하려면 넣어줘야한다.\u003c/p\u003e\n\n\u003cp\u003e\u003ccode\u003e[#_rp_rep_class_#]\u003c/code\u003e 는 글의 성격에 따라 관리자의 댓글은 rp\u003cem\u003eadmin, 일반 사용자가 작성한 글은 rp\u003c/em\u003egeneral, 비밀글은 rp_secret 으로 치환된다.\u003c/p\u003e\n\n\u003ch4\u003e댓글쓰기\u003c/h4\u003e\n\n\u003cp\u003e\u003ccode\u003e\u0026lt;s_rp_input_form\u0026gt;\u003c/code\u003e 는 form 태그를 만든다. class를 따로 지정할 수는 없다.\u003c/p\u003e\n\n\u003cp\u003e댓글이 없는 경우 \u003ccode\u003e[#_article_rep_rp_link_#]\u003c/code\u003e는 댓글을 작성할 수 없다는 메시지를 출력하는 alert으로 치환된다.\u003c/p\u003e\n\n\u003cp\u003e\u003ccode\u003e\u0026lt;s_rp_count\u0026gt;\u003c/code\u003e 는 댓글이 2개 이상일 경우에만 원하는 내용을 넣을 수 있다. 2개 미만(0개, 1개)인 경우 \"Comment 0\" 과 같은 형태로 치환된다.\u003c/p\u003e\n\n\u003ch3\u003epaging\u003c/h3\u003e\n\n\u003ch4\u003e\u003ccode\u003e_prev_page_\u003c/code\u003e, \u003ccode\u003e_next_page_\u003c/code\u003e\u003c/h4\u003e\n\n\u003cp\u003e\u003ccode\u003e\u0026lt;s_paging\u0026gt;\u0026lt;/s_paging\u0026gt;\u003c/code\u003e 내부에 \u003ccode\u003e\u0026lt;s_paging_rep\u0026gt;\u0026lt;/s_paging_rep\u0026gt;\u003c/code\u003e로 페이지 리스트를 뿌릴 수 있다. 이전 페이지, 다음 페이지로의 이동은 \u003ccode\u003e[#_prev_page_#]\u003c/code\u003e 등으로 따로 명시해주면 되는데 통째로 \u003ccode\u003ehref=\"[prevPageUrl]\"\u003c/code\u003e 로 변환되니 \u003ccode\u003ehref=\"[#_prev_page_#]\"\u003c/code\u003e 처럼 사용하면 안된다.\u003c/p\u003e\n\n\u003ch4\u003e\u003ccode\u003es_paging_rep\u003c/code\u003e\u003c/h4\u003e\n\n\u003cp\u003e\u003ccode\u003e\u0026lt;s_paging_rep\u0026gt;\u0026lt;/s_paging_rep\u0026gt;\u003c/code\u003e 는 루프를 돌면서 \u003ccode\u003e[#_paging_rep_link_#]\u003c/code\u003e 와 \u003ccode\u003e[#_paging_rep_link_num_#]\u003c/code\u003e를 사용할 수 있도록 해주는데 1~ 100까지의 숫자가 있다고 한다면 \"1, 2, 3, 4, ..., 100\" 로 출력한다. 근데 문제는 \"...\" 에 있다. 무조건 \u003ccode\u003e\u0026lt;span class=\"interword\"\u0026gt;...\u0026lt;/span\u0026gt;\u003c/code\u003e 가 중간에 추가되며 이를 컨트롤 할 수가 없다. li 로 페이징을 구성했다면 다음과 같은 결과를 얻게 된다.\u003c/p\u003e\n\n\u003cpre class=\"prettyprint\"\u003e\u003ccode\u003e\u0026lt;li\u0026gt;\u0026lt;a class=\"num\"\u0026gt;\u0026lt;span class=\"selected\"\u0026gt;1\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\n\u0026lt;li\u0026gt;\u0026lt;a href=\"/378\" class=\"num\"\u0026gt;\u0026lt;span\u0026gt;2\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\n\u0026lt;li\u0026gt;\u0026lt;a href=\"/377\" class=\"num\"\u0026gt;\u0026lt;span\u0026gt;3\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\n\u0026lt;li\u0026gt;\u0026lt;a href=\"/376\" class=\"num\"\u0026gt;\u0026lt;span\u0026gt;4\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\n\u0026lt;li\u0026gt;\u0026lt;a href=\"/375\" class=\"num\"\u0026gt;\u0026lt;span\u0026gt;5\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\n\u0026lt;span class=\"interword\"\u0026gt;...\u0026lt;/span\u0026gt;\n\u0026lt;li\u0026gt;\u0026lt;a href=\"/1\" class=\"num\"\u0026gt;\u0026lt;span\u0026gt;378\u0026lt;/span\u0026gt;\u0026lt;/a\u0026gt;\u0026lt;/li\u0026gt;\u003c/code\u003e\u003c/pre\u003e\n\n\u003cp\u003epaging에 li를 사용해선 안된다. 이전/다음만 사용하려면 li를 사용해도 된다.\u003c/p\u003e\n\n\u003ch4\u003e\u003ccode\u003e_no_more_prev_\u003c/code\u003e, \u003ccode\u003e_no_more_next_\u003c/code\u003e\u003c/h4\u003e\n\n\u003cp\u003e이전 글이 없을때 \u003ccode\u003e[#_no_more_prev_#]\u003c/code\u003e는 \u003ccode\u003eno-more-prev\u003c/code\u003e로 \u003ccode\u003e[#_no_more_next_#]\u003c/code\u003e는 \u003ccode\u003eno-more-prev\u003c/code\u003e로 변환된다. 이 class에 대한 css를 지정해두어야 한다.\u003c/p\u003e            ","summary":"티스토리에는 많은 치환자가 사용된다. 각 치환자의 특징과 주의할 점을 정리해보려고 한다.\n\ns_t3\n\ns_t3은 티스토리 가이드에 다음과 같이 정의되어 있다.\n\n자바스크립트를 지정해줄 영역을 선언하기 위해서 \u0026lt;body\u0026gt;안에 \u0026lt;s_t3\u0026gt;\u0026lt;/s_t3\u0026gt;를 넣어줘야 합니다.\n\n여기서 말하는 자바스크립트는 티스토리 기능이 동작하도록 하는 스크립트이다. 실제로 s_t3을 넣은 영역 제일 상위에 다음의 스크립트가 추가된다. 티스토리 ","image":"https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"}},"__N_SSG":true},"page":"/tistory/[id]","query":{"id":"380"},"buildId":"k2SjylS4DhAPzPoZgQ49x","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

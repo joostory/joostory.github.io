@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="ko"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="JooStory.net"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><link rel="canonical" href="https://blog.joostory.net/215"/><title>Ubuntu 8.10 에서 Firefox 3.5.3 수동으로 설치하기</title><meta property="og:type" content="article"/><meta property="og:title" content="Ubuntu 8.10 에서 Firefox 3.5.3 수동으로 설치하기"/><meta property="og:description" content="Ubuntu는 정말 소프트웨어 설치하기가 편합니다.
+시냅틱 패키지 관리자에서 찾은 다음 설치버튼만 누르면 됩니다. :)
+
+근데!!!! 한가지 예외가 있었으니... Firefox 입니다.
+Firefox 3.5 정식버전이 나온지가 언젠데 아직도 제가 쓰는 Ubuntu 8.10 에서는 Firefox 3.0.14를... -_-
+물론 시냅틱 관리자에 firefox 3.5, 3.6 이란 이름으로 등록이 되어 있지만 진짜 firefox가 아니고 이상한 녀석들입니다."/><meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F1777801F4AD5C44758"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Ubuntu 8.10 에서 Firefox 3.5.3 수동으로 설치하기"/><meta name="twitter:description" content="Ubuntu는 정말 소프트웨어 설치하기가 편합니다.
+시냅틱 패키지 관리자에서 찾은 다음 설치버튼만 누르면 됩니다. :)
+
+근데!!!! 한가지 예외가 있었으니... Firefox 입니다.
+Firefox 3.5 정식버전이 나온지가 언젠데 아직도 제가 쓰는 Ubuntu 8.10 에서는 Firefox 3.0.14를... -_-
+물론 시냅틱 관리자에 firefox 3.5, 3.6 이란 이름으로 등록이 되어 있지만 진짜 firefox가 아니고 이상한 녀석들입니다."/><meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F1777801F4AD5C44758"/><meta name="next-head-count" content="15"/><link rel="preload" href="/_next/static/css/11ae7950df9656c6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/11ae7950df9656c6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f76bbe1730ea85a1.js" defer=""></script><script src="/_next/static/chunks/494-fa03e5491fc3b3a9.js" defer=""></script><script src="/_next/static/chunks/pages/tistory/%5Bid%5D-571a42114028488a.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_buildManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_ssgManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><main><div class=""><div class="pt-40 pb-36 px-20 border-b-[1px] relative"><h1 class="font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center text-3xl">Ubuntu 8.10 에서 Firefox 3.5.3 수동으로 설치하기</h1><div class="flex justify-center"><em class="text-sm"><time dateTime="2009. 10. 14. 21:32">2009. 10. 14. 21:32</time></em></div></div><div class="w-[650px] pt-10 pb-20 mx-auto"><article class="prose">Ubuntu는 정말 소프트웨어 설치하기가 편합니다.<br>
+시냅틱 패키지 관리자에서 찾은 다음 설치버튼만 누르면 됩니다. :)<br>
+<br>
+근데!!!! 한가지 예외가 있었으니... Firefox 입니다.<br>
+Firefox 3.5 정식버전이 나온지가 언젠데 아직도 제가 쓰는 Ubuntu 8.10 에서는 Firefox 3.0.14를... -_-<br>
+물론 시냅틱 관리자에 firefox 3.5, 3.6 이란 이름으로 등록이 되어 있지만 진짜 firefox가 아니고 이상한 녀석들입니다. 개발단계의&nbsp; firefox들...<br>
+<br>
+왠만하면 시냅틱에서 관리해주는 것들은 건드리지 않으려 했지만 이번엔 과감히 도전했습니다.<br>
+지금부터 시작합니다.<br>
+<br><br>
+<span style="font-size: 12pt; font-weight: bold;">Firefox 3.5.3 설치하기</span><br>
+<br>
+1. Firefox 3.5 를 다운받습니다. (<a title="[http://www.mozilla.org]로 이동합니다." target="_blank" href="http://www.mozilla.org">http://www.mozilla.org</a>)<br>
+<br>
+2. 다운받은 Linux 용 Firefox의 압축을 풀어놓습니다.<br>
+기본으로 설치된 녀석이 /usr/lib/firefox-3.0.14 로 있어서 /usr/lib/firefox-3.5.3 을 만들었습니다.<br>
+<br>
+3. /usr/bin/firefox 를 편집합니다.<br>
+13번 라인은 주석처리하고, 14번 라인을 추가했습니다.<br>
+<br>
+
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px;" class="txc-textbox">
+&nbsp;12&nbsp; MOZDIR=$HOME/.mozilla<br>
+&nbsp;13&nbsp; #LIBDIR=/usr/lib/firefox-3.0.14<br>
+&nbsp;14&nbsp; LIBDIR=/usr/lib/firefox-3.5.3<br>
+</div>
+<br>
+<br>
+- 끝 -<br>
+<br>참 쉽죠잉~<br>
+물론 문제가 있습니다. 글꼴의 부드러운 효과가 사라졌습니다. -_-;<br>
+방법을 찾아야겠습니다. (그래도 빠른 3.5 를 쓸 수 있으니 괜찮아요~ ㅋ)<br>
+<br><div class="imageblock center" style="text-align: center; clear: both;"><span data-url="https://t1.daumcdn.net/cfile/tistory/1777801F4AD5C44758?download" data-lightbox="lightbox"><img srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile24.uf.tistory.com%2Fimage%2F1777801F4AD5C44758AC39" src="https://t1.daumcdn.net/cfile/tistory/1777801F4AD5C44758" style="cursor: pointer;max-width:100%;height:auto" width="461" height="53" alt="" filename="screenshot4.png" filemime="image/jpeg" ></span></div><br>
+<br><br>
+<br><br>            </article></div></div></main></div><footer class="bg-slate-100 border-t border-accent-2 mt-6"><div class="py-4 flex flex-col items-center justify-center text-xs text-slate-500"><a href="https://twitter.com/@JooStory">@JooStory</a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"215","date":"2009. 10. 14. 21:32","title":"Ubuntu 8.10 에서 Firefox 3.5.3 수동으로 설치하기","content":"Ubuntu는 정말 소프트웨어 설치하기가 편합니다.\u003cbr\u003e\n시냅틱 패키지 관리자에서 찾은 다음 설치버튼만 누르면 됩니다. :)\u003cbr\u003e\n\u003cbr\u003e\n근데!!!! 한가지 예외가 있었으니... Firefox 입니다.\u003cbr\u003e\nFirefox 3.5 정식버전이 나온지가 언젠데 아직도 제가 쓰는 Ubuntu 8.10 에서는 Firefox 3.0.14를... -_-\u003cbr\u003e\n물론 시냅틱 관리자에 firefox 3.5, 3.6 이란 이름으로 등록이 되어 있지만 진짜 firefox가 아니고 이상한 녀석들입니다. 개발단계의\u0026nbsp; firefox들...\u003cbr\u003e\n\u003cbr\u003e\n왠만하면 시냅틱에서 관리해주는 것들은 건드리지 않으려 했지만 이번엔 과감히 도전했습니다.\u003cbr\u003e\n지금부터 시작합니다.\u003cbr\u003e\n\u003cbr\u003e\u003cbr\u003e\n\u003cspan style=\"font-size: 12pt; font-weight: bold;\"\u003eFirefox 3.5.3 설치하기\u003c/span\u003e\u003cbr\u003e\n\u003cbr\u003e\n1. Firefox 3.5 를 다운받습니다. (\u003ca title=\"[http://www.mozilla.org]로 이동합니다.\" target=\"_blank\" href=\"http://www.mozilla.org\"\u003ehttp://www.mozilla.org\u003c/a\u003e)\u003cbr\u003e\n\u003cbr\u003e\n2. 다운받은 Linux 용 Firefox의 압축을 풀어놓습니다.\u003cbr\u003e\n기본으로 설치된 녀석이 /usr/lib/firefox-3.0.14 로 있어서 /usr/lib/firefox-3.5.3 을 만들었습니다.\u003cbr\u003e\n\u003cbr\u003e\n3. /usr/bin/firefox 를 편집합니다.\u003cbr\u003e\n13번 라인은 주석처리하고, 14번 라인을 추가했습니다.\u003cbr\u003e\n\u003cbr\u003e\n\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px;\" class=\"txc-textbox\"\u003e\n\u0026nbsp;12\u0026nbsp; MOZDIR=$HOME/.mozilla\u003cbr\u003e\n\u0026nbsp;13\u0026nbsp; #LIBDIR=/usr/lib/firefox-3.0.14\u003cbr\u003e\n\u0026nbsp;14\u0026nbsp; LIBDIR=/usr/lib/firefox-3.5.3\u003cbr\u003e\n\u003c/div\u003e\n\u003cbr\u003e\n\u003cbr\u003e\n- 끝 -\u003cbr\u003e\n\u003cbr\u003e참 쉽죠잉~\u003cbr\u003e\n물론 문제가 있습니다. 글꼴의 부드러운 효과가 사라졌습니다. -_-;\u003cbr\u003e\n방법을 찾아야겠습니다. (그래도 빠른 3.5 를 쓸 수 있으니 괜찮아요~ ㅋ)\u003cbr\u003e\n\u003cbr\u003e\u003cdiv class=\"imageblock center\" style=\"text-align: center; clear: both;\"\u003e\u003cspan data-url=\"https://t1.daumcdn.net/cfile/tistory/1777801F4AD5C44758?download\" data-lightbox=\"lightbox\"\u003e\u003cimg srcset=\"https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2\u0026fname=http%3A%2F%2Fcfile24.uf.tistory.com%2Fimage%2F1777801F4AD5C44758AC39\" src=\"https://t1.daumcdn.net/cfile/tistory/1777801F4AD5C44758\" style=\"cursor: pointer;max-width:100%;height:auto\" width=\"461\" height=\"53\" alt=\"\" filename=\"screenshot4.png\" filemime=\"image/jpeg\" \u003e\u003c/span\u003e\u003c/div\u003e\u003cbr\u003e\n\u003cbr\u003e\u003cbr\u003e\n\u003cbr\u003e\u003cbr\u003e            ","summary":"Ubuntu는 정말 소프트웨어 설치하기가 편합니다.\n시냅틱 패키지 관리자에서 찾은 다음 설치버튼만 누르면 됩니다. :)\n\n근데!!!! 한가지 예외가 있었으니... Firefox 입니다.\nFirefox 3.5 정식버전이 나온지가 언젠데 아직도 제가 쓰는 Ubuntu 8.10 에서는 Firefox 3.0.14를... -_-\n물론 시냅틱 관리자에 firefox 3.5, 3.6 이란 이름으로 등록이 되어 있지만 진짜 firefox가 아니고 이상한 녀석들입니다.","image":"https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2\u0026fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F1777801F4AD5C44758"}},"__N_SSG":true},"page":"/tistory/[id]","query":{"id":"215"},"buildId":"k2SjylS4DhAPzPoZgQ49x","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

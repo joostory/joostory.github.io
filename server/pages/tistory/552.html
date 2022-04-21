@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="ko"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="JooStory.net"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><link rel="canonical" href="https://blog.joostory.net/552"/><title>React Hooks</title><meta property="og:type" content="article"/><meta property="og:title" content="React Hooks"/><meta property="og:description" content="
+이 발표를 보고나서 Dan Abramov에게 묘한 매력을 느꼈다. 영어도 잘 못하면서 팔로우를 시작했다. Reactjs에 대해서 이런저런 것을 많이 보게 되었다. 그리고 어느 덧 발표했던 기능이 정식출시했다. 이름은 React Hooks다.
+기본 개념
+Hooks소개의 Motivation에도 말하고 있지만 Hooks의 기본 목적인 간결함이다. 다음의 코드는 Hooks를 사용한 코드다.
+&lt;code&gt;import React, { useState } from "/><meta property="og:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="React Hooks"/><meta name="twitter:description" content="
+이 발표를 보고나서 Dan Abramov에게 묘한 매력을 느꼈다. 영어도 잘 못하면서 팔로우를 시작했다. Reactjs에 대해서 이런저런 것을 많이 보게 되었다. 그리고 어느 덧 발표했던 기능이 정식출시했다. 이름은 React Hooks다.
+기본 개념
+Hooks소개의 Motivation에도 말하고 있지만 Hooks의 기본 목적인 간결함이다. 다음의 코드는 Hooks를 사용한 코드다.
+&lt;code&gt;import React, { useState } from "/><meta property="twitter:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="next-head-count" content="15"/><link rel="preload" href="/_next/static/css/11ae7950df9656c6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/11ae7950df9656c6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f76bbe1730ea85a1.js" defer=""></script><script src="/_next/static/chunks/494-fa03e5491fc3b3a9.js" defer=""></script><script src="/_next/static/chunks/pages/tistory/%5Bid%5D-571a42114028488a.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_buildManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_ssgManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><main><div class=""><div class="pt-40 pb-36 px-20 border-b-[1px] relative"><h1 class="font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center text-3xl">React Hooks</h1><div class="flex justify-center"><em class="text-sm"><time dateTime="2019. 2. 9. 14:59">2019. 2. 9. 14:59</time></em></div></div><div class="w-[650px] pt-10 pb-20 mx-auto"><article class="prose"><p><iframe style="display: block; margin: 10px auto 30px;" src="https://www.youtube.com/embed/dpw9EHDh2bM" width="560" height="315" frameborder="0" allowfullscreen="" data-opengraph-url="https://www.youtube.com/watch?v=dpw9EHDh2bM" data-opengraph-image="https://i.ytimg.com/vi/dpw9EHDh2bM/maxresdefault.jpg" data-opengraph-title="React%20Today%20and%20Tomorrow%20and%2090%25%20Cleaner%20React%20With%20Hooks"></iframe></p>
+<p>이 발표를 보고나서 <a href="https://twitter.com/dan_abramov">Dan Abramov</a>에게 묘한 매력을 느꼈다. 영어도 잘 못하면서 팔로우를 시작했다. Reactjs에 대해서 이런저런 것을 많이 보게 되었다. 그리고 어느 덧 발표했던 기능이 정식출시했다. 이름은 <a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a>다.</p>
+<h2>기본 개념</h2>
+<p><a href="https://reactjs.org/docs/hooks-intro.html#motivation">Hooks소개의 Motivation</a>에도 말하고 있지만 Hooks의 기본 목적인 간결함이다. 다음의 코드는 Hooks를 사용한 코드다.</p>
+<pre><code>import React, { useState } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+<p>이 코드가 얼마나 간결한 코드인가하면 Hooks를 사용하지 않은 다음의 코드를 보면 알 수 있다.</p>
+<pre><code>import React, { Component } from 'react';
+
+class Example extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+
+    this.handleChangeCount = this.handleChangeCount.bind(this);
+  }
+
+  handleChangeCount() {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
+  render() {
+    const { count } = this.state;
+    return (
+      &lt;div&gt;
+        &lt;p&gt;You clicked {count} times&lt;/p&gt;
+        &lt;button onClick={() =&gt; this.handleChangeCount()}&gt;
+          Click me
+        &lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}</code></pre>
+<p>동일한 동작을 하는 코드지만 뭔가 많이 길다. <code>count++</code>를 하기 위해서 함수를 만들고 <code>bind</code>도 한다. 그리고 <code>state.count</code>를 만들기 위해서 <code>constructor</code>도 만들고 아무 의미없는 <code>super(props)</code>도 넣어줘야 했다. <code>render</code>에서 <code>this</code>를 생략하기 위해서 <code>const</code>로 별도의 변수를 만들기도 했다. Hooks를 사용한 코드는 사용하지 않은 코드에서 count를 컨트롤 하기 위해 만들었던 14줄의 코드를 단 한 줄로 만들었다.</p>
+<pre><code>const [count, setCount] = useState(0);</code></pre>
+<p>여기서 사용한 <code>useState</code>가 바로 Hooks의 하나다.</p>
+<h2>useState</h2>
+<p><code>useState</code>는&nbsp;<code>component</code>의 <code>state</code>를 관리하기 위한 hook이다. <code>useState</code>의 코드만 놓고 보면 사실 이전과 크게 다르지 않은 것 같다. 하지만 사용에는 큰 차이가 있다. hooks를 사용할 때는 기본적으로 <code>component</code>를 <code>class</code>가 아닌 <code>function</code>으로 만든다. 그래서 <code>setState</code>를 하기 위한 handler도 필요없고 자연스레 handler를 <code>bind</code>할 필요도 없어진다. javascript의 클로저로 인해 어디서든 바로 <code>setState</code>에 값을 넘겨주면 된다. <code>state</code>값도 마찬가지다.</p>
+<pre><code>// before
+this.state = { state: initialState };
+this.setState({ state: newValue });
+
+// hooks
+const [state, setState] = useState(initialState);
+setState(newValue);</code></pre>
+<p>다른 유용한 hook들도 몇개 더 살펴보자.</p>
+<h2>useEffect</h2>
+<p><code>useEffect</code>는 쉽게 말해 <code>componentDidUpdate</code>라고 보면 된다. 다른 점은 <code>componentDidMount</code>, <code>componentWillUnmount</code>가 하는 일도 한다. 기본구조는 다음과 같다.</p>
+<pre><code>useEffect(() =&gt; {
+  // BODY
+
+  return () =&gt; {
+    // CLEAN-UP
+  };
+}, [TARGET]);</code></pre>
+<p><a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle">React Component의 lifecycle</a>상에서 언제 실행되는지를 보면 쉽게 무슨 일을 하는지 파악할 수 있다.</p>
+<ul>
+<li>Mounting에서는 <code>render</code>후에 <code>componentDidMount</code>가 실행된다. Hooks에서는 <code>BODY</code> 부분이 실행된다.</li>
+<li>Unmounting에서는 <code>componentWillUnmount</code>가 실행된다. Hooks에서는 <code>CLEAN-UP</code> 부분이 실행된다.</li>
+<li>Updating에서는 <code>render</code>후에 <code>componentDidUpdate</code>가 실행된다. Hooks에서는 <code>CLEAN-UP</code>이 실행된 후 <code>BODY</code>가 실행된다. Updating은 이전에도 그렇지만 <code>props</code>, <code>state</code>가 변경되면 수행된다.</li>
+</ul>
+<p>여기까지만 보면 <code>useEffect</code> 내부가 굉장히 커지고 복잡해질 것 같다. 하지만 <code>TARGET</code>으로 인해 이 복잡성이 크게 줄어든다. TARGET은 변경을 추적할 대상이다. 아래의 코드에서 첫번째 <code>useEffect</code>는 <code>count</code>라는 <code>state</code>값이 변경된 경우에만 동작한다. 두번째 <code>useEffect</code>는 <code>props.post.title</code> 값이 변경된 경우에만 동작한다. <code>TARGET</code>을 생략하면 모든 값에 대해서 동작한다.</p>
+<pre><code>useEffect(() =&gt; { ... }, [count]);
+useEffect(() =&gt; { ... }, [props.post.title]);</code></pre>
+<p>물론 <code>componentDidUpdate</code>를 잘 사용하지않는 나로서는 조금 번거롭게 느껴지기도 한다.</p>
+<h2>useRef</h2>
+<p><code>useRef</code>는 <code>React.createRef</code>와 거의 같다. 다른 점은 <code>initialValue</code>를 사용할 수 있다는 점이다. 하지만 내가 사용하는 대부분의 경우 <code>ref</code>는 <code>container</code>와 <code>child</code>의 검증을 위해서 사용했다. 그래서 이게 있다고 <code>ref</code>를 <code>form</code>에 사용할 것 같지는 않다.</p>
+<h2>useReducer</h2>
+<p><code>useReducer</code>는 코드만 보면 <code>redux</code>에서 사용하던 <code>reducer</code>와 흡사하다. 하지만 이것은 <code>redux</code>가 아니다. 여러 컴포넌트에 <code>useReducer</code>로 만든 <code>reducer</code>를 같이 사용할 수 있다면 완전히 대체할 수도 있을 것 같다.</p>
+<pre><code>const initialState = {count: 0};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    default:
+      throw new Error();
+  }
+}
+
+function Counter({initialCount}) {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    &lt;&gt;
+      Count: {state.count}
+      &lt;button onClick={() =&gt; dispatch({type: 'increment'})}&gt;+&lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch({type: 'decrement'})}&gt;-&lt;/button&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
+<hr>
+<p>정리한 것 외에도 <a href="https://reactjs.org/docs/hooks-reference.html">여러가지 Hook</a>이 있고 <a href="https://reactjs.org/docs/hooks-custom.html">hook을 만들 수도 있다</a>. 어쨌거나 코드 스타일을 OOP에서 Function으로 바꿔야 해서 좀 더 javascript다운 코드를 만들 수 있을 것 같고 무엇보다 간결한 코드를 만들 수 있을 것 같다. 테스트도 더 쉬워진 것 같다. 얼른 해보고 싶다.</p>
+<p>+ 추가: <a href="https://github.com/joostory/tistory-editor/commit/1f78ae01951e3894436e2f5364321de8777dda4f?diff=split">몇개 변경해봤는데</a> 너무 좋다. redux를 어떻게 써야하는 지를 몰라서 일단 중단했는데 알아보고나서 더 해야겠다.&nbsp;</p>
+<h2>Reference</h2>
+<ul>
+<li><a href="https://reactjs.org/blog/2019/02/06/react-v16.8.0.html">https://reactjs.org/blog/2019/02/06/react-v16.8.0.html</a></li>
+<li><a href="https://reactjs.org/docs/hooks-overview.html">https://reactjs.org/docs/hooks-overview.html</a></li>
+<li><a href="https://reactjs.org/docs/hooks-reference.html">https://reactjs.org/docs/hooks-reference.html</a></li>
+</ul>            </article></div></div></main></div><footer class="bg-slate-100 border-t border-accent-2 mt-6"><div class="py-4 flex flex-col items-center justify-center text-xs text-slate-500"><a href="https://twitter.com/@JooStory">@JooStory</a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"552","date":"2019. 2. 9. 14:59","title":"React Hooks","content":"\u003cp\u003e\u003ciframe style=\"display: block; margin: 10px auto 30px;\" src=\"https://www.youtube.com/embed/dpw9EHDh2bM\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"\" data-opengraph-url=\"https://www.youtube.com/watch?v=dpw9EHDh2bM\" data-opengraph-image=\"https://i.ytimg.com/vi/dpw9EHDh2bM/maxresdefault.jpg\" data-opengraph-title=\"React%20Today%20and%20Tomorrow%20and%2090%25%20Cleaner%20React%20With%20Hooks\"\u003e\u003c/iframe\u003e\u003c/p\u003e\n\u003cp\u003e이 발표를 보고나서 \u003ca href=\"https://twitter.com/dan_abramov\"\u003eDan Abramov\u003c/a\u003e에게 묘한 매력을 느꼈다. 영어도 잘 못하면서 팔로우를 시작했다. Reactjs에 대해서 이런저런 것을 많이 보게 되었다. 그리고 어느 덧 발표했던 기능이 정식출시했다. 이름은 \u003ca href=\"https://reactjs.org/docs/hooks-intro.html\"\u003eReact Hooks\u003c/a\u003e다.\u003c/p\u003e\n\u003ch2\u003e기본 개념\u003c/h2\u003e\n\u003cp\u003e\u003ca href=\"https://reactjs.org/docs/hooks-intro.html#motivation\"\u003eHooks소개의 Motivation\u003c/a\u003e에도 말하고 있지만 Hooks의 기본 목적인 간결함이다. 다음의 코드는 Hooks를 사용한 코드다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eimport React, { useState } from 'react';\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n\n  return (\n    \u0026lt;div\u0026gt;\n      \u0026lt;p\u0026gt;You clicked {count} times\u0026lt;/p\u0026gt;\n      \u0026lt;button onClick={() =\u0026gt; setCount(count + 1)}\u0026gt;\n        Click me\n      \u0026lt;/button\u0026gt;\n    \u0026lt;/div\u0026gt;\n  );\n}\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e이 코드가 얼마나 간결한 코드인가하면 Hooks를 사용하지 않은 다음의 코드를 보면 알 수 있다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eimport React, { Component } from 'react';\n\nclass Example extends Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      count: 0\n    };\n\n    this.handleChangeCount = this.handleChangeCount.bind(this);\n  }\n\n  handleChangeCount() {\n    this.setState({\n      count: this.state.count + 1\n    })\n  }\n\n  render() {\n    const { count } = this.state;\n    return (\n      \u0026lt;div\u0026gt;\n        \u0026lt;p\u0026gt;You clicked {count} times\u0026lt;/p\u0026gt;\n        \u0026lt;button onClick={() =\u0026gt; this.handleChangeCount()}\u0026gt;\n          Click me\n        \u0026lt;/button\u0026gt;\n      \u0026lt;/div\u0026gt;\n    );\n  }\n}\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e동일한 동작을 하는 코드지만 뭔가 많이 길다. \u003ccode\u003ecount++\u003c/code\u003e를 하기 위해서 함수를 만들고 \u003ccode\u003ebind\u003c/code\u003e도 한다. 그리고 \u003ccode\u003estate.count\u003c/code\u003e를 만들기 위해서 \u003ccode\u003econstructor\u003c/code\u003e도 만들고 아무 의미없는 \u003ccode\u003esuper(props)\u003c/code\u003e도 넣어줘야 했다. \u003ccode\u003erender\u003c/code\u003e에서 \u003ccode\u003ethis\u003c/code\u003e를 생략하기 위해서 \u003ccode\u003econst\u003c/code\u003e로 별도의 변수를 만들기도 했다. Hooks를 사용한 코드는 사용하지 않은 코드에서 count를 컨트롤 하기 위해 만들었던 14줄의 코드를 단 한 줄로 만들었다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003econst [count, setCount] = useState(0);\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e여기서 사용한 \u003ccode\u003euseState\u003c/code\u003e가 바로 Hooks의 하나다.\u003c/p\u003e\n\u003ch2\u003euseState\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003euseState\u003c/code\u003e는\u0026nbsp;\u003ccode\u003ecomponent\u003c/code\u003e의 \u003ccode\u003estate\u003c/code\u003e를 관리하기 위한 hook이다. \u003ccode\u003euseState\u003c/code\u003e의 코드만 놓고 보면 사실 이전과 크게 다르지 않은 것 같다. 하지만 사용에는 큰 차이가 있다. hooks를 사용할 때는 기본적으로 \u003ccode\u003ecomponent\u003c/code\u003e를 \u003ccode\u003eclass\u003c/code\u003e가 아닌 \u003ccode\u003efunction\u003c/code\u003e으로 만든다. 그래서 \u003ccode\u003esetState\u003c/code\u003e를 하기 위한 handler도 필요없고 자연스레 handler를 \u003ccode\u003ebind\u003c/code\u003e할 필요도 없어진다. javascript의 클로저로 인해 어디서든 바로 \u003ccode\u003esetState\u003c/code\u003e에 값을 넘겨주면 된다. \u003ccode\u003estate\u003c/code\u003e값도 마찬가지다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// before\nthis.state = { state: initialState };\nthis.setState({ state: newValue });\n\n// hooks\nconst [state, setState] = useState(initialState);\nsetState(newValue);\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e다른 유용한 hook들도 몇개 더 살펴보자.\u003c/p\u003e\n\u003ch2\u003euseEffect\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003euseEffect\u003c/code\u003e는 쉽게 말해 \u003ccode\u003ecomponentDidUpdate\u003c/code\u003e라고 보면 된다. 다른 점은 \u003ccode\u003ecomponentDidMount\u003c/code\u003e, \u003ccode\u003ecomponentWillUnmount\u003c/code\u003e가 하는 일도 한다. 기본구조는 다음과 같다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003euseEffect(() =\u0026gt; {\n  // BODY\n\n  return () =\u0026gt; {\n    // CLEAN-UP\n  };\n}, [TARGET]);\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ca href=\"https://reactjs.org/docs/react-component.html#the-component-lifecycle\"\u003eReact Component의 lifecycle\u003c/a\u003e상에서 언제 실행되는지를 보면 쉽게 무슨 일을 하는지 파악할 수 있다.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eMounting에서는 \u003ccode\u003erender\u003c/code\u003e후에 \u003ccode\u003ecomponentDidMount\u003c/code\u003e가 실행된다. Hooks에서는 \u003ccode\u003eBODY\u003c/code\u003e 부분이 실행된다.\u003c/li\u003e\n\u003cli\u003eUnmounting에서는 \u003ccode\u003ecomponentWillUnmount\u003c/code\u003e가 실행된다. Hooks에서는 \u003ccode\u003eCLEAN-UP\u003c/code\u003e 부분이 실행된다.\u003c/li\u003e\n\u003cli\u003eUpdating에서는 \u003ccode\u003erender\u003c/code\u003e후에 \u003ccode\u003ecomponentDidUpdate\u003c/code\u003e가 실행된다. Hooks에서는 \u003ccode\u003eCLEAN-UP\u003c/code\u003e이 실행된 후 \u003ccode\u003eBODY\u003c/code\u003e가 실행된다. Updating은 이전에도 그렇지만 \u003ccode\u003eprops\u003c/code\u003e, \u003ccode\u003estate\u003c/code\u003e가 변경되면 수행된다.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e여기까지만 보면 \u003ccode\u003euseEffect\u003c/code\u003e 내부가 굉장히 커지고 복잡해질 것 같다. 하지만 \u003ccode\u003eTARGET\u003c/code\u003e으로 인해 이 복잡성이 크게 줄어든다. TARGET은 변경을 추적할 대상이다. 아래의 코드에서 첫번째 \u003ccode\u003euseEffect\u003c/code\u003e는 \u003ccode\u003ecount\u003c/code\u003e라는 \u003ccode\u003estate\u003c/code\u003e값이 변경된 경우에만 동작한다. 두번째 \u003ccode\u003euseEffect\u003c/code\u003e는 \u003ccode\u003eprops.post.title\u003c/code\u003e 값이 변경된 경우에만 동작한다. \u003ccode\u003eTARGET\u003c/code\u003e을 생략하면 모든 값에 대해서 동작한다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003euseEffect(() =\u0026gt; { ... }, [count]);\nuseEffect(() =\u0026gt; { ... }, [props.post.title]);\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e물론 \u003ccode\u003ecomponentDidUpdate\u003c/code\u003e를 잘 사용하지않는 나로서는 조금 번거롭게 느껴지기도 한다.\u003c/p\u003e\n\u003ch2\u003euseRef\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003euseRef\u003c/code\u003e는 \u003ccode\u003eReact.createRef\u003c/code\u003e와 거의 같다. 다른 점은 \u003ccode\u003einitialValue\u003c/code\u003e를 사용할 수 있다는 점이다. 하지만 내가 사용하는 대부분의 경우 \u003ccode\u003eref\u003c/code\u003e는 \u003ccode\u003econtainer\u003c/code\u003e와 \u003ccode\u003echild\u003c/code\u003e의 검증을 위해서 사용했다. 그래서 이게 있다고 \u003ccode\u003eref\u003c/code\u003e를 \u003ccode\u003eform\u003c/code\u003e에 사용할 것 같지는 않다.\u003c/p\u003e\n\u003ch2\u003euseReducer\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003euseReducer\u003c/code\u003e는 코드만 보면 \u003ccode\u003eredux\u003c/code\u003e에서 사용하던 \u003ccode\u003ereducer\u003c/code\u003e와 흡사하다. 하지만 이것은 \u003ccode\u003eredux\u003c/code\u003e가 아니다. 여러 컴포넌트에 \u003ccode\u003euseReducer\u003c/code\u003e로 만든 \u003ccode\u003ereducer\u003c/code\u003e를 같이 사용할 수 있다면 완전히 대체할 수도 있을 것 같다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003econst initialState = {count: 0};\n\nfunction reducer(state, action) {\n  switch (action.type) {\n    case 'increment':\n      return {count: state.count + 1};\n    case 'decrement':\n      return {count: state.count - 1};\n    default:\n      throw new Error();\n  }\n}\n\nfunction Counter({initialCount}) {\n  const [state, dispatch] = useReducer(reducer, initialState);\n  return (\n    \u0026lt;\u0026gt;\n      Count: {state.count}\n      \u0026lt;button onClick={() =\u0026gt; dispatch({type: 'increment'})}\u0026gt;+\u0026lt;/button\u0026gt;\n      \u0026lt;button onClick={() =\u0026gt; dispatch({type: 'decrement'})}\u0026gt;-\u0026lt;/button\u0026gt;\n    \u0026lt;/\u0026gt;\n  );\n}\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003cp\u003e정리한 것 외에도 \u003ca href=\"https://reactjs.org/docs/hooks-reference.html\"\u003e여러가지 Hook\u003c/a\u003e이 있고 \u003ca href=\"https://reactjs.org/docs/hooks-custom.html\"\u003ehook을 만들 수도 있다\u003c/a\u003e. 어쨌거나 코드 스타일을 OOP에서 Function으로 바꿔야 해서 좀 더 javascript다운 코드를 만들 수 있을 것 같고 무엇보다 간결한 코드를 만들 수 있을 것 같다. 테스트도 더 쉬워진 것 같다. 얼른 해보고 싶다.\u003c/p\u003e\n\u003cp\u003e+ 추가: \u003ca href=\"https://github.com/joostory/tistory-editor/commit/1f78ae01951e3894436e2f5364321de8777dda4f?diff=split\"\u003e몇개 변경해봤는데\u003c/a\u003e 너무 좋다. redux를 어떻게 써야하는 지를 몰라서 일단 중단했는데 알아보고나서 더 해야겠다.\u0026nbsp;\u003c/p\u003e\n\u003ch2\u003eReference\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://reactjs.org/blog/2019/02/06/react-v16.8.0.html\"\u003ehttps://reactjs.org/blog/2019/02/06/react-v16.8.0.html\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://reactjs.org/docs/hooks-overview.html\"\u003ehttps://reactjs.org/docs/hooks-overview.html\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://reactjs.org/docs/hooks-reference.html\"\u003ehttps://reactjs.org/docs/hooks-reference.html\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e            ","summary":"\n이 발표를 보고나서 Dan Abramov에게 묘한 매력을 느꼈다. 영어도 잘 못하면서 팔로우를 시작했다. Reactjs에 대해서 이런저런 것을 많이 보게 되었다. 그리고 어느 덧 발표했던 기능이 정식출시했다. 이름은 React Hooks다.\n기본 개념\nHooks소개의 Motivation에도 말하고 있지만 Hooks의 기본 목적인 간결함이다. 다음의 코드는 Hooks를 사용한 코드다.\n\u003ccode\u003eimport React, { useState } from ","image":"https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"}},"__N_SSG":true},"page":"/tistory/[id]","query":{"id":"552"},"buildId":"k2SjylS4DhAPzPoZgQ49x","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

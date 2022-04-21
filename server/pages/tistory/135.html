@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="ko"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="JooStory.net"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><link rel="canonical" href="https://blog.joostory.net/135"/><title>Ubuntu 삽질기</title><meta property="og:type" content="article"/><meta property="og:title" content="Ubuntu 삽질기"/><meta property="og:description" content="Ubuntu 8.10에서는 아직도 OpenOffice.org 2.4 버전을 쓰고 있습니다.
+3.0이 나온지가 언젠데... 그래서 얼마전부터 3.0을 launchpad 에서 받아서 쓰고 있었습니다.
+오늘.. 아니.. 어제 아침 OpenOffice 관련 update 가 있었는데... 그 뒤로 갑자기 실행이 되지 않았습니다. -_-;;
+그래서 2.4 로 다운그레이드 하려니 language-support-ko 이런 것 까지 지우려드는 겁니다.
+아... 정말.."/><meta property="og:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Ubuntu 삽질기"/><meta name="twitter:description" content="Ubuntu 8.10에서는 아직도 OpenOffice.org 2.4 버전을 쓰고 있습니다.
+3.0이 나온지가 언젠데... 그래서 얼마전부터 3.0을 launchpad 에서 받아서 쓰고 있었습니다.
+오늘.. 아니.. 어제 아침 OpenOffice 관련 update 가 있었는데... 그 뒤로 갑자기 실행이 되지 않았습니다. -_-;;
+그래서 2.4 로 다운그레이드 하려니 language-support-ko 이런 것 까지 지우려드는 겁니다.
+아... 정말.."/><meta property="twitter:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="next-head-count" content="15"/><link rel="preload" href="/_next/static/css/11ae7950df9656c6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/11ae7950df9656c6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f76bbe1730ea85a1.js" defer=""></script><script src="/_next/static/chunks/494-fa03e5491fc3b3a9.js" defer=""></script><script src="/_next/static/chunks/pages/tistory/%5Bid%5D-571a42114028488a.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_buildManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_ssgManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><main><div class=""><div class="pt-40 pb-36 px-20 border-b-[1px] relative"><h1 class="font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center text-3xl">Ubuntu 삽질기</h1><div class="flex justify-center"><em class="text-sm"><time dateTime="2008. 11. 27. 01:44">2008. 11. 27. 01:44</time></em></div></div><div class="w-[650px] pt-10 pb-20 mx-auto"><article class="prose">Ubuntu 8.10에서는 아직도 OpenOffice.org 2.4 버전을 쓰고 있습니다.<br>
+3.0이 나온지가 언젠데... 그래서 얼마전부터 3.0을 launchpad 에서 받아서 쓰고 있었습니다.<br>
+오늘.. 아니.. 어제 아침 OpenOffice 관련 update 가 있었는데... 그 뒤로 갑자기 실행이 되지 않았습니다. -_-;;<br>
+그래서 2.4 로 다운그레이드 하려니 language-support-ko 이런 것 까지 지우려드는 겁니다.<br>
+아... 정말...<br>
+<br>결국 야근을 결심하고.. 오후 7시가 넘어서부터 Ubuntu 8.10 을 다시 설치하기 시작했습니다.<br>
+제가 Ubuntu 만 1년동안 몇번을 설치했는지 모릅니다. 당근 후딱후딱 설치했죠.<br>
+파티션은 간단히 /, /home, swap, fat32(/media/sda4) 의 4개로 나누어 쓰고 있는데<br>
+재설치시에는 / 만 재설치하면 설정도 그대로 남아 있어 아주 편리합니다.<br>
+<br>그런데....<br>
+설치가 완료되고 나서 부팅이 안되는 겁니다.<br>
+grub 콘솔이 뭘 원하는지 껌뻑거리고 있었습니다. -_-;;<br>
+<br>그래서 / 를 완전히 포맷하고 다시 설치.. 이제는 부팅이 잘 되더군요.<br>
+<br>그런데 또!!! driver 설치를 하는데 갑자기 모든 시스템이 멈추는겁니다.<br>
+키가 아무것도 먹히지 않더군요. 그래서 좀 찜찜하지만 전원을 껐다가 켰습니다.<br>
+그랬더니만 fsck 를 직접 쳐서 고쳐달라고 root 콘솔이 깜빡입니다.<br>
+몇번을 그랬는지 모릅니다. (전원을 그냥 꺼서 그런 듯...)<br>
+설치를 몇번이나 해봤지만 이런 상황이 되니 데이터가 날아가는건 아닌지 걱정이 되기 시작했습니다. ㅠㅠ<br>
+<br>다행히 다시 부팅되었을때는 정상적으로 동작하더군요. 데이터도 말짱하고.. 휴...<br>
+<br>이렇게 설치가 끝나는구나 했지만 문제는 여기서 그친게 아니었습니다.<br>
+폰트가 갑자기 볼드체만 인식하고.. flash player 버전이 낮아서 그런지 flash가 잘 안보이고..<br>
+AWN 이 맛이 갔는지 멀쩡히 등록된 OpenOffice 가 보이질 않고...<br>
+PDT 는 왜 그러는지 다운로드 속도가 20kb/s 이고..<br>
+emacs 설정을 왜 /etc/emacs 에 했었는지.. ㅠㅠ 다 날아갔고...<br>
+eclipse 아이콘 파일은 리눅스용으로 제공안하는지 아이콘이 엉망이고...<br>
+<br>아악~~~~~!!!!!<br>
+살려주세요~~ ㅠㅠ 이런 적이 없었는데....<br>
+<br><br>            </article></div></div></main></div><footer class="bg-slate-100 border-t border-accent-2 mt-6"><div class="py-4 flex flex-col items-center justify-center text-xs text-slate-500"><a href="https://twitter.com/@JooStory">@JooStory</a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"135","date":"2008. 11. 27. 01:44","title":"Ubuntu 삽질기","content":"Ubuntu 8.10에서는 아직도 OpenOffice.org 2.4 버전을 쓰고 있습니다.\u003cbr\u003e\n3.0이 나온지가 언젠데... 그래서 얼마전부터 3.0을 launchpad 에서 받아서 쓰고 있었습니다.\u003cbr\u003e\n오늘.. 아니.. 어제 아침 OpenOffice 관련 update 가 있었는데... 그 뒤로 갑자기 실행이 되지 않았습니다. -_-;;\u003cbr\u003e\n그래서 2.4 로 다운그레이드 하려니 language-support-ko 이런 것 까지 지우려드는 겁니다.\u003cbr\u003e\n아... 정말...\u003cbr\u003e\n\u003cbr\u003e결국 야근을 결심하고.. 오후 7시가 넘어서부터 Ubuntu 8.10 을 다시 설치하기 시작했습니다.\u003cbr\u003e\n제가 Ubuntu 만 1년동안 몇번을 설치했는지 모릅니다. 당근 후딱후딱 설치했죠.\u003cbr\u003e\n파티션은 간단히 /, /home, swap, fat32(/media/sda4) 의 4개로 나누어 쓰고 있는데\u003cbr\u003e\n재설치시에는 / 만 재설치하면 설정도 그대로 남아 있어 아주 편리합니다.\u003cbr\u003e\n\u003cbr\u003e그런데....\u003cbr\u003e\n설치가 완료되고 나서 부팅이 안되는 겁니다.\u003cbr\u003e\ngrub 콘솔이 뭘 원하는지 껌뻑거리고 있었습니다. -_-;;\u003cbr\u003e\n\u003cbr\u003e그래서 / 를 완전히 포맷하고 다시 설치.. 이제는 부팅이 잘 되더군요.\u003cbr\u003e\n\u003cbr\u003e그런데 또!!! driver 설치를 하는데 갑자기 모든 시스템이 멈추는겁니다.\u003cbr\u003e\n키가 아무것도 먹히지 않더군요. 그래서 좀 찜찜하지만 전원을 껐다가 켰습니다.\u003cbr\u003e\n그랬더니만 fsck 를 직접 쳐서 고쳐달라고 root 콘솔이 깜빡입니다.\u003cbr\u003e\n몇번을 그랬는지 모릅니다. (전원을 그냥 꺼서 그런 듯...)\u003cbr\u003e\n설치를 몇번이나 해봤지만 이런 상황이 되니 데이터가 날아가는건 아닌지 걱정이 되기 시작했습니다. ㅠㅠ\u003cbr\u003e\n\u003cbr\u003e다행히 다시 부팅되었을때는 정상적으로 동작하더군요. 데이터도 말짱하고.. 휴...\u003cbr\u003e\n\u003cbr\u003e이렇게 설치가 끝나는구나 했지만 문제는 여기서 그친게 아니었습니다.\u003cbr\u003e\n폰트가 갑자기 볼드체만 인식하고.. flash player 버전이 낮아서 그런지 flash가 잘 안보이고..\u003cbr\u003e\nAWN 이 맛이 갔는지 멀쩡히 등록된 OpenOffice 가 보이질 않고...\u003cbr\u003e\nPDT 는 왜 그러는지 다운로드 속도가 20kb/s 이고..\u003cbr\u003e\nemacs 설정을 왜 /etc/emacs 에 했었는지.. ㅠㅠ 다 날아갔고...\u003cbr\u003e\neclipse 아이콘 파일은 리눅스용으로 제공안하는지 아이콘이 엉망이고...\u003cbr\u003e\n\u003cbr\u003e아악~~~~~!!!!!\u003cbr\u003e\n살려주세요~~ ㅠㅠ 이런 적이 없었는데....\u003cbr\u003e\n\u003cbr\u003e\u003cbr\u003e            ","summary":"Ubuntu 8.10에서는 아직도 OpenOffice.org 2.4 버전을 쓰고 있습니다.\n3.0이 나온지가 언젠데... 그래서 얼마전부터 3.0을 launchpad 에서 받아서 쓰고 있었습니다.\n오늘.. 아니.. 어제 아침 OpenOffice 관련 update 가 있었는데... 그 뒤로 갑자기 실행이 되지 않았습니다. -_-;;\n그래서 2.4 로 다운그레이드 하려니 language-support-ko 이런 것 까지 지우려드는 겁니다.\n아... 정말..","image":"https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"}},"__N_SSG":true},"page":"/tistory/[id]","query":{"id":"135"},"buildId":"k2SjylS4DhAPzPoZgQ49x","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

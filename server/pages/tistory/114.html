@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="ko"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="JooStory.net"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><link rel="canonical" href="https://blog.joostory.net/114"/><title>How to use comm in Unix</title><meta property="og:type" content="article"/><meta property="og:title" content="How to use comm in Unix"/><meta property="og:description" content="shell 상에서 뭔가 비교할 일이 자주 생기는데 그 때마다 shell을 잘 모르니 스크립트를 만들어서 비교했습니다. 무언가 좋은 방법이 없을까 찾다가 comm 이라는 명령을 알았습니다.
+제가 사용한 comm 버전은 6.10 입니다.
+
+$ comm --version
+comm (GNU coreutils) 6.10
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL versio"/><meta property="og:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="How to use comm in Unix"/><meta name="twitter:description" content="shell 상에서 뭔가 비교할 일이 자주 생기는데 그 때마다 shell을 잘 모르니 스크립트를 만들어서 비교했습니다. 무언가 좋은 방법이 없을까 찾다가 comm 이라는 명령을 알았습니다.
+제가 사용한 comm 버전은 6.10 입니다.
+
+$ comm --version
+comm (GNU coreutils) 6.10
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL versio"/><meta property="twitter:image" content="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"/><meta name="next-head-count" content="15"/><link rel="preload" href="/_next/static/css/11ae7950df9656c6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/11ae7950df9656c6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f76bbe1730ea85a1.js" defer=""></script><script src="/_next/static/chunks/494-fa03e5491fc3b3a9.js" defer=""></script><script src="/_next/static/chunks/pages/tistory/%5Bid%5D-571a42114028488a.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_buildManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_ssgManifest.js" defer=""></script><script src="/_next/static/k2SjylS4DhAPzPoZgQ49x/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><main><div class=""><div class="pt-40 pb-36 px-20 border-b-[1px] relative"><h1 class="font-bold tracking-tighter leading-tight md:leading-none mb-4 text-center text-3xl">How to use comm in Unix</h1><div class="flex justify-center"><em class="text-sm"><time dateTime="2008. 9. 23. 15:21">2008. 9. 23. 15:21</time></em></div></div><div class="w-[650px] pt-10 pb-20 mx-auto"><article class="prose">shell 상에서 뭔가 비교할 일이 자주 생기는데 그 때마다 shell을 잘 모르니 스크립트를 만들어서 비교했습니다. 무언가 좋은 방법이 없을까 찾다가 comm 이라는 명령을 알았습니다.<br>
+<br>제가 사용한 comm 버전은 6.10 입니다.<br>
+<br><div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">
+$ comm --version<br>
+comm (GNU coreutils) 6.10<br>
+Copyright (C) 2008 Free Software Foundation, Inc.<br>
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;<br>
+This is free software: you are free to change and redistribute it.<br>
+There is NO WARRANTY, to the extent permitted by law.<br>
+<br>Written by Richard Stallman and David MacKenzie.</div>
+<br><br>
+comm 은 간단히 설명하자면 newline (\n)으로 구분된 텍스트 데이터 파일을 비교하는 기능을 합니다. 조건은 비교할 파일들이 정렬되어 있어야 한다는 것입니다. (sort 등으로)<br>
+<br>a 파일내용<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+</div><br>
+b 파일내용<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+0<br>
+</div><br>
+<br>먼저 comm 기본적인 사용결과입니다.<br>
+a 에만 존재하는 내용이 가장 왼쪽, 둘 모두에 있는 내용이 가장 오른쪽, b 에만 존재하는 내용이 가운데의 순서로 결과가 출력됩니다.<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">$ comm a b<br>
+1<br>
+2<br>
+3<br>
+4<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 5<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 6<br>
+&nbsp;&nbsp;&nbsp; 7<br>
+&nbsp;&nbsp;&nbsp; 8<br>
+&nbsp;&nbsp;&nbsp; 9<br>
+&nbsp;&nbsp;&nbsp; 0<br>
+</div><br>
+<br>comm 에는 세가지 옵션이 있습니다. 1, 2,3<br>
+먼저 옵션 1 입니다. b에 속한 내용이 중복된 것, b에만 있는 것 순서로 출력됩니다.<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">$ comm -1 a b<br>
+&nbsp;&nbsp;&nbsp; 5<br>
+&nbsp;&nbsp;&nbsp; 6<br>
+7<br>
+8<br>
+9<br>
+0<br>
+</div><br>
+옵션 2는 a에 속한 내용이 a에만 있는 것, 중복된 것 순서로 출력됩니다.<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">joo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -2 a b<br>
+1<br>
+2<br>
+3<br>
+4<br>
+&nbsp;&nbsp;&nbsp; 5<br>
+&nbsp;&nbsp;&nbsp; 6<br>
+</div><br>
+옵션 3은 a, b 각자에만 속한 것들을 출력합니다.<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">joo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -3 a b<br>
+1<br>
+2<br>
+3<br>
+4<br>
+&nbsp;&nbsp;&nbsp; 7<br>
+&nbsp;&nbsp;&nbsp; 8<br>
+&nbsp;&nbsp;&nbsp; 9<br>
+&nbsp;&nbsp;&nbsp; 0</div>
+<br>여러가지 옵션을 섞어 쓸 수 있습니다.<br>
+1과 3을 쓰면 1 &amp;&amp; 3 이라고 할 수 있습니다. b에만 속한 것이 출력됩니다.<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">joo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -13 a b<br>
+7<br>
+8<br>
+9<br>
+0<br>
+</div><br>
+2와 3을 쓰면 a에만 속한 것이 출력됩니다.<br>
+<div style="border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);" class="txc-textbox">joo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -23 a b<br>
+1<br>
+2<br>
+3<br>
+4</div>
+<br><br>
+<br>            </article></div></div></main></div><footer class="bg-slate-100 border-t border-accent-2 mt-6"><div class="py-4 flex flex-col items-center justify-center text-xs text-slate-500"><a href="https://twitter.com/@JooStory">@JooStory</a></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"114","date":"2008. 9. 23. 15:21","title":"How to use comm in Unix","content":"shell 상에서 뭔가 비교할 일이 자주 생기는데 그 때마다 shell을 잘 모르니 스크립트를 만들어서 비교했습니다. 무언가 좋은 방법이 없을까 찾다가 comm 이라는 명령을 알았습니다.\u003cbr\u003e\n\u003cbr\u003e제가 사용한 comm 버전은 6.10 입니다.\u003cbr\u003e\n\u003cbr\u003e\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003e\n$ comm --version\u003cbr\u003e\ncomm (GNU coreutils) 6.10\u003cbr\u003e\nCopyright (C) 2008 Free Software Foundation, Inc.\u003cbr\u003e\nLicense GPLv3+: GNU GPL version 3 or later \u0026lt;http://gnu.org/licenses/gpl.html\u0026gt;\u003cbr\u003e\nThis is free software: you are free to change and redistribute it.\u003cbr\u003e\nThere is NO WARRANTY, to the extent permitted by law.\u003cbr\u003e\n\u003cbr\u003eWritten by Richard Stallman and David MacKenzie.\u003c/div\u003e\n\u003cbr\u003e\u003cbr\u003e\ncomm 은 간단히 설명하자면 newline (\\n)으로 구분된 텍스트 데이터 파일을 비교하는 기능을 합니다. 조건은 비교할 파일들이 정렬되어 있어야 한다는 것입니다. (sort 등으로)\u003cbr\u003e\n\u003cbr\u003ea 파일내용\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003e1\u003cbr\u003e\n2\u003cbr\u003e\n3\u003cbr\u003e\n4\u003cbr\u003e\n5\u003cbr\u003e\n6\u003cbr\u003e\n\u003c/div\u003e\u003cbr\u003e\nb 파일내용\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003e5\u003cbr\u003e\n6\u003cbr\u003e\n7\u003cbr\u003e\n8\u003cbr\u003e\n9\u003cbr\u003e\n0\u003cbr\u003e\n\u003c/div\u003e\u003cbr\u003e\n\u003cbr\u003e먼저 comm 기본적인 사용결과입니다.\u003cbr\u003e\na 에만 존재하는 내용이 가장 왼쪽, 둘 모두에 있는 내용이 가장 오른쪽, b 에만 존재하는 내용이 가운데의 순서로 결과가 출력됩니다.\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003e$ comm a b\u003cbr\u003e\n1\u003cbr\u003e\n2\u003cbr\u003e\n3\u003cbr\u003e\n4\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; \u0026nbsp;\u0026nbsp;\u0026nbsp; 5\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; \u0026nbsp;\u0026nbsp;\u0026nbsp; 6\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 7\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 8\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 9\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 0\u003cbr\u003e\n\u003c/div\u003e\u003cbr\u003e\n\u003cbr\u003ecomm 에는 세가지 옵션이 있습니다. 1, 2,3\u003cbr\u003e\n먼저 옵션 1 입니다. b에 속한 내용이 중복된 것, b에만 있는 것 순서로 출력됩니다.\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003e$ comm -1 a b\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 5\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 6\u003cbr\u003e\n7\u003cbr\u003e\n8\u003cbr\u003e\n9\u003cbr\u003e\n0\u003cbr\u003e\n\u003c/div\u003e\u003cbr\u003e\n옵션 2는 a에 속한 내용이 a에만 있는 것, 중복된 것 순서로 출력됩니다.\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003ejoo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -2 a b\u003cbr\u003e\n1\u003cbr\u003e\n2\u003cbr\u003e\n3\u003cbr\u003e\n4\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 5\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 6\u003cbr\u003e\n\u003c/div\u003e\u003cbr\u003e\n옵션 3은 a, b 각자에만 속한 것들을 출력합니다.\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003ejoo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -3 a b\u003cbr\u003e\n1\u003cbr\u003e\n2\u003cbr\u003e\n3\u003cbr\u003e\n4\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 7\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 8\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 9\u003cbr\u003e\n\u0026nbsp;\u0026nbsp;\u0026nbsp; 0\u003c/div\u003e\n\u003cbr\u003e여러가지 옵션을 섞어 쓸 수 있습니다.\u003cbr\u003e\n1과 3을 쓰면 1 \u0026amp;\u0026amp; 3 이라고 할 수 있습니다. b에만 속한 것이 출력됩니다.\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003ejoo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -13 a b\u003cbr\u003e\n7\u003cbr\u003e\n8\u003cbr\u003e\n9\u003cbr\u003e\n0\u003cbr\u003e\n\u003c/div\u003e\u003cbr\u003e\n2와 3을 쓰면 a에만 속한 것이 출력됩니다.\u003cbr\u003e\n\u003cdiv style=\"border: 1px dashed rgb(193, 193, 193); padding: 10px; background-color: rgb(238, 238, 238);\" class=\"txc-textbox\"\u003ejoo8111@joo8111-desktop:~/Documents/etc/learn_shell$ comm -23 a b\u003cbr\u003e\n1\u003cbr\u003e\n2\u003cbr\u003e\n3\u003cbr\u003e\n4\u003c/div\u003e\n\u003cbr\u003e\u003cbr\u003e\n\u003cbr\u003e            ","summary":"shell 상에서 뭔가 비교할 일이 자주 생기는데 그 때마다 shell을 잘 모르니 스크립트를 만들어서 비교했습니다. 무언가 좋은 방법이 없을까 찾다가 comm 이라는 명령을 알았습니다.\n제가 사용한 comm 버전은 6.10 입니다.\n\n$ comm --version\ncomm (GNU coreutils) 6.10\nCopyright (C) 2008 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL versio","image":"https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png"}},"__N_SSG":true},"page":"/tistory/[id]","query":{"id":"114"},"buildId":"k2SjylS4DhAPzPoZgQ49x","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
