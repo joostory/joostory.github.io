@@ -17,9 +17,10 @@ jobs:
         run: |
           npm ci
           npm run build
+          npm run export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
-          folder: .next
+          folder: out
