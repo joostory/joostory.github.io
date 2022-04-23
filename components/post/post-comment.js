@@ -9,7 +9,7 @@ export default function PostComment() {
         repoId="MDEwOlJlcG9zaXRvcnkxOTk2MjkxNQ=="
         category="General"
         categoryId="DIC_kwDOATCcI84COuRD"
-        mapping="url"
+        mapping="pathname"
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="bottom"
