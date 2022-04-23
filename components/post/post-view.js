@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import PostHeader from './post-header'
 import PostBody from './post-body'
 import MetaPost from './meta-post'
+import PostComment from './post-comment'
 
 export default function PostView({
   title, content, summary, ogImage, coverImage, date
@@ -34,6 +34,9 @@ export default function PostView({
         <PostBody
           content={content}
         />
+
+        <PostComment />
+
       </div>
     </>
   )
