@@ -6,7 +6,7 @@ author:
   name: Joo
   picture: '/assets/profile.jpg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: 'https://joostory.net/assets/posts/hello-world/cover.jpg'
 ---
 
 오래 정들었던 텀블러를 떠나 github page로 JooStory.net을 이전하려고 한다. 말이 이전이지 이전에 작성했던 글을 옮겨오지는 않을 것이다. 도메인이 바뀌어서 링크가 모두 깨질텐데 대단한 내용이 있는 것도 아니라서 상관하지 않기로 했다. 텀블러, 티스토리에서 개인 웹사이트를 꾸미기 위해서 많은 노력을 했는데 직접 고쳐쓰지 않는한 한계가 있는 것 같다. (티스토리에서 직접 내가 필요한 기능을 만들땐 참 좋았다)

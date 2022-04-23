@@ -1,6 +1,3 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../../lib/constants'
-
 export default function Footer() {
   return (
     <footer className="bg-slate-100 border-t border-accent-2 mt-6">

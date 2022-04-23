@@ -15,8 +15,9 @@ export default function Post({ post }) {
       <PostView
         title={post.title}
         content={post.content}
-        summary={post.summary}
-        ogImage={post.image}
+        summary={post.excerpt}
+        ogImage={post.ogImage}
+        author={post.author}
         coverImage={post.coverImage}
         date={post.date}
       />
@@ -31,6 +32,7 @@ export async function getStaticProps({ params }) {
     'slug',
     'author',
     'content',
+    'excerpt',
     'ogImage',
     'coverImage',
   ])

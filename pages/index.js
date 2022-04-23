@@ -1,19 +1,15 @@
 import MoreStories from '../components/post/more-stories'
 import Layout from '../components/layout/layout'
 import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import ProfileSummary from '../components/profile/profile-summary'
+import MetaIndex from '../components/layout/meta-index'
 
 export default function Index({ allPosts }) {
   const morePosts = allPosts
   return (
     <>
       <Layout>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-
+        <MetaIndex />
         <div className='pt-24 pb-20 border-b-[1px]'>
           <ProfileSummary />
         </div>

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import PostHeader from './post-header'
 import PostBody from './post-body'
+import MetaPost from './meta-post'
 
 export default function PostView({
   title, content, summary, ogImage, coverImage, date
@@ -14,18 +15,12 @@ export default function PostView({
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={summary} />
-        <meta property="og:image" content={ogImage} />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={summary} />
-        <meta property="twitter:image" content={ogImage} />
-      </Head>
+      <MetaPost
+        title={title}
+        summary={summary}
+        ogImage={ogImage}
+      />
+
       <div className=''>
         <PostHeader
           title={title}

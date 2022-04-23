@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../../lib/constants'
 
 export default function Meta() {
   return (
@@ -32,11 +31,6 @@ export default function Meta() {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
       <link rel="shortcut icon" href="/favicon.ico" />
-      <meta
-        name="description"
-        content={`JooStory.net`}
-      />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )
 }
