@@ -4,12 +4,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "npm run build-sitemap",
     "start": "next start",
     "clean": "rm -rf .next out",
     "build-sitemap": "next-sitemap",
     "preexport": "npm run build",
     "export": "next export",
-    "postexport": "npm run build-sitemap",
     "lint": "next lint"
   },
   "dependencies": {
