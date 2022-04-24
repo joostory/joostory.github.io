@@ -10,7 +10,8 @@
     "build-sitemap": "next-sitemap",
     "preexport": "npm run build",
     "export": "next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
     "@giscus/react": "^2.0.3",

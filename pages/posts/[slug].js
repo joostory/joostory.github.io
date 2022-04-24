@@ -1,35 +1,17 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Layout from '../../components/layout/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import markdownToHtml from '../../lib/markdownToHtml'
-import PostView from '../../components/post/post-view'
+import Layout from '@/components/layout/layout'
+import { getPostBySlug, getAllPosts } from '@/lib/api'
+import markdownToHtml from '@/lib/markdownToHtml'
+import PostView from '@/components/post/post-view'
 
-export default function Post({ post }) {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
-  return (
-    <Layout>
-      <PostView
-        title={post.title}
-        content={post.content}
-        summary={post.excerpt}
-        ogImage={post.ogImage}
-        author={post.author}
-        coverImage={post.coverImage}
-        date={post.date}
-      />
-    </Layout>
-  )
-}
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
     'slug',
+    'tags',
     'author',
     'content',
     'excerpt',
@@ -61,4 +43,26 @@ export async function getStaticPaths() {
     }),
     fallback: false,
   }
+}
+
+
+export default function Post({ post }) {
+  const router = useRouter()
+  if (!router.isFallback && !post?.slug) {
+    return <ErrorPage statusCode={404} />
+  }
+  return (
+    <Layout>
+      <PostView
+        title={post.title}
+        content={post.content}
+        summary={post.excerpt}
+        ogImage={post.ogImage}
+        author={post.author}
+        tags={post.tags}
+        coverImage={post.coverImage}
+        date={post.date}
+      />
+    </Layout>
+  )
 }

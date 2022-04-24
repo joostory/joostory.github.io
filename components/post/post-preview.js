@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import DateFormatter from '../common/date-formatter'
-import CoverImage from './cover-image'
 import Link from 'next/link'
-import cn from 'classnames'
 
 export default function PostPreview({
   title,

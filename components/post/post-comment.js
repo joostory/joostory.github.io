@@ -2,7 +2,7 @@ import Giscus from '@giscus/react'
 
 export default function PostComment() {
   return (
-    <div className='w-[650px] pt-0 pb-20 mx-auto'>
+    <div className='pt-0 pb-20 mx-auto'>
       <Giscus
         id="comments"
         repo="joostory/joostory.github.io"

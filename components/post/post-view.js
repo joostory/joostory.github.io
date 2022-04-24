@@ -4,9 +4,10 @@ import PostHeader from './post-header'
 import PostBody from './post-body'
 import MetaPost from './meta-post'
 import PostComment from './post-comment'
+import ContentBody from '../layout/content-body'
 
 export default function PostView({
-  title, content, summary, ogImage, coverImage, date
+  title, content, tags, summary, ogImage, coverImage, date
 }) {
   const router = useRouter()
   if (!router.isFallback && !title) {
@@ -21,23 +22,23 @@ export default function PostView({
         ogImage={ogImage}
       />
 
-      <div className=''>
-        <PostHeader
-          title={title}
-          date={date}
-          coverImage={coverImage}
-          author={({
-            name: 'Joo'
-          })}
-        />
+      <PostHeader
+        title={title}
+        date={date}
+        tags={tags}
+        coverImage={coverImage}
+        author={({
+          name: 'Joo'
+        })}
+      />
 
+      <ContentBody>
         <PostBody
           content={content}
         />
 
         <PostComment />
-
-      </div>
+      </ContentBody>
     </>
   )
 }

@@ -3,10 +3,9 @@ import Layout from '@/components/layout/layout'
 import { getAllPosts } from '@/lib/api'
 import ProfileSummary from '@/components/profile/profile-summary'
 import MetaIndex from '@/components/layout/meta-index'
-import ContentBody from '@/components/layout/content-body'
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
+  const posts = getAllPosts([
     'title',
     'date',
     'slug',
@@ -16,11 +15,11 @@ export async function getStaticProps() {
     'excerpt',
   ])
 
-  const posts = allPosts.slice(0, 10)
   return {
     props: { posts },
   }
 }
+
 
 export default function Index({ posts }) {
   return (
@@ -31,11 +30,11 @@ export default function Index({ posts }) {
           <ProfileSummary />
         </div>
 
-        <ContentBody>
+        <div className='max-w-3xl mx-auto mt-6 mb-16'>
           {posts.length > 0 &&
             <MoreStories posts={posts} />
           }
-        </ContentBody>
+        </div>
       </Layout>
     </>
   )
