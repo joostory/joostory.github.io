@@ -10,7 +10,7 @@ export default function PostComment() {
         category="General"
         categoryId="DIC_kwDOATCcI84COuRD"
         mapping="pathname"
-        reactionsEnabled="1"
+        reactionsEnabled="0"
         emitMetadata="0"
         inputPosition="bottom"
         theme="light"

@@ -25,7 +25,6 @@ export default function PostView({
       <PostHeader
         title={title}
         date={date}
-        tags={tags}
         coverImage={coverImage}
         author={({
           name: 'Joo'
@@ -34,6 +33,7 @@ export default function PostView({
 
       <ContentBody>
         <PostBody
+          tags={tags}
           content={content}
         />
 
