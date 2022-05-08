@@ -13,7 +13,7 @@ export default function PostComment() {
         reactionsEnabled="0"
         emitMetadata="0"
         inputPosition="bottom"
-        theme="light"
+        theme="dark"
         lang="ko"
         loading="lazy"
         crossOrigin="anonymous"

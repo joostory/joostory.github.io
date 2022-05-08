@@ -4,6 +4,7 @@ import { getAllPosts } from '@/lib/api'
 import ProfileSummary from '@/components/profile/profile-summary'
 import MetaIndex from '@/components/layout/meta-index'
 import ContentBody from '@/components/layout/content-body'
+import IndexProfile from '@/components/profile/index-profile'
 
 export async function getStaticProps() {
   const allPosts = getAllPosts([
@@ -27,9 +28,10 @@ export default function Index({ posts }) {
     <>
       <Layout>
         <MetaIndex />
-        <div className='pt-24 pb-20 border-b-[1px]'>
-          <ProfileSummary />
-        </div>
+        
+        <IndexProfile />
+
+        <div className='divider' />
 
         <ContentBody>
           {posts.length > 0 &&

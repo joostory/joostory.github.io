@@ -14,8 +14,8 @@ export default function PostPreview({
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <a className='group flex space-x-5'>
           <div className='flex-1'>
-            <strong className="group-hover:text-yellow-600 font-normal text-lg">{title}</strong>
-            <p className="text-md leading-relaxed text-slate-600">{excerpt}</p>
+            <strong className="group-hover:text-yellow-600 font-normal text-lg font-bold text-slate-400">{title}</strong>
+            <p className="text-md leading-relaxed text-slate-500">{excerpt}</p>
           </div>
           
           {coverImage &&

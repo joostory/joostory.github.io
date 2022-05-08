@@ -31,6 +31,8 @@ export default function PostView({
         })}
       />
 
+      <div className='divider' />
+
       <ContentBody>
         <PostBody
           tags={tags}

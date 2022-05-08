@@ -1,14 +1,17 @@
 import Image from 'next/image'
-import { MailIcon } from '@heroicons/react/outline'
 
 export default function ProfileSummary() {
   return (
     <div className='flex flex-col items-center space-y-3'>
-      <Image
-        src={'/assets/profile.jpg'}
-        className='rounded-full'
-        width='100' height='100'
-      />
+      <div className='avatar'>
+        <div className='w-24 mask mask-squircle'>
+          <Image
+            src={'/assets/profile.jpg'}
+            width='100' height='100'
+          />
+        </div>
+      </div>
+      
 
       <div className='flex flex-col items-center'>
         <div className='text-xl'>Joo</div>

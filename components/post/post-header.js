@@ -3,7 +3,7 @@ import PostTitle from './post-title'
 
 export default function PostHeader({ title, date, tags }) {
   return (
-    <div className='pt-40 pb-36 px-20 border-b-[1px] relative'>
+    <div className='pt-40 pb-32 px-20 relative'>
       <PostTitle>{title}</PostTitle>
       <div className="flex justify-center">
         <em className="text-sm text-slate-500">
