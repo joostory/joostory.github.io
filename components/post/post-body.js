@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function PostBody({ content, tags }) {
   return (
-    <div className='pt-10 pb-10 mx-auto'>
+    <div className='pt-2 pb-10'>
       <article
         dangerouslySetInnerHTML={{__html: content}}
         className='prose'
