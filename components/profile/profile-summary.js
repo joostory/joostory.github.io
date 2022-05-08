@@ -8,6 +8,7 @@ export default function ProfileSummary() {
           <Image
             src={'/assets/profile.jpg'}
             width='100' height='100'
+            alt='Profile Image'
           />
         </div>
       </div>
