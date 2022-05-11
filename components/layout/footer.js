@@ -5,7 +5,9 @@ export default function Footer() {
   return (
     <footer className="footer footer-center p-10 text-base-content bg-base-200">
       <div className="grid grid-flow-col gap-4">
-        <Link href="/profile" className="link link-hover">About me</Link>
+        <Link href="/" className="link link-hover">Index</Link>
+        <Link href="/profile" className="link link-hover">About</Link>
+        <Link href="/tags" className="link link-hover">Tags</Link>
         <Link href="https://blog.joostory.net" className="link link-hover">Blog</Link>
       </div>
 
@@ -23,7 +25,7 @@ export default function Footer() {
       </div>
 
       <div className="text-xs">
-        <Link href="https://twitter.com/@JooStory">@JooStory</Link>
+        @Joo
       </div>
     </footer>
   )

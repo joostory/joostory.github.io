@@ -14,8 +14,8 @@ export default function PostPreview({
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <a className='group flex space-x-5'>
           <div className='flex-1'>
-            <strong className="group-hover:text-yellow-600 font-normal text-lg font-bold text-slate-400">{title}</strong>
-            <p className="text-md leading-relaxed text-slate-500">{excerpt}</p>
+            <strong className="group-hover:text-yellow-600 text-xl leading-8 text-slate-300 block">{title}</strong>
+            <p className="text-md leading-relaxed text-slate-400">{excerpt}</p>
           </div>
           
           {coverImage &&
@@ -32,9 +32,9 @@ export default function PostPreview({
         </a>
       </Link>
       <div className="text-xs mt-4">
-        <span className='text-slate-500'>
+        <em className='text-slate-500'>
           <DateFormatter dateString={date} />
-        </span>
+        </em>
       </div>
     </div>
   )

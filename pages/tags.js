@@ -22,9 +22,11 @@ export default function Tags({ tags }) {
             <h1 className="text-3xl font-bold">Tags</h1>
           </div>
         </ContentHeader>
+
+        <div className='divider' />
         
         <ContentBody>
-          <div className="mt-20 mb-10 space-x-2 flex justify-center">
+          <div className="mt-20 mb-20 space-x-2 flex justify-center">
             {tags && tags.map(t =>
               <div key={t.tag} className={'float-left'}>
                 <Link as={`/tags/${t.tag}`} href="/tags/[tag]">

@@ -51,6 +51,8 @@ export default function TagPostList({ tag, posts }) {
           </div>
         </ContentHeader>
 
+        <div className='divider' />
+
         <ContentBody>
           {posts.length > 0 &&
             <MoreStories posts={posts} />
