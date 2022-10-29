@@ -6,8 +6,8 @@ export default function ProfileSummary() {
     <div className='flex flex-col items-center space-y-3'>
       <div className='avatar'>
         <div className='w-24 mask mask-squircle'>
-          <img
-            src={'/assets/profile.jpg'}
+          <Image
+            src={profileImage}
             width='100' height='100'
             alt='Profile Image'
           />
