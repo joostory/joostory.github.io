@@ -10,10 +10,8 @@ export default function PostBody({ content, tags }) {
 
       <div className='flex items-center space-x-2 mt-10'>
         {tags.map(tag =>
-          <Link as={`/tags/${tag}`} href='/tags/[tag]' key={tag}>
-            <a className='group'>
-              <span key={tag} className='text-sm text-slate-500 group-hover:text-yellow-400'>#{tag}</span>
-            </a>
+          <Link as={`/tags/${tag}`} href='/tags/[tag]' key={tag} className='group'>
+            <span key={tag} className='text-sm text-slate-500 group-hover:text-yellow-400'>#{tag}</span>
           </Link>
         )}
       </div>

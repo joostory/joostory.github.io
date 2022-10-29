@@ -29,11 +29,9 @@ export default function Tags({ tags }) {
           <div className="mt-20 mb-20 space-x-2 flex justify-center">
             {tags && tags.map(t =>
               <div key={t.tag} className={'float-left'}>
-                <Link as={`/tags/${t.tag}`} href="/tags/[tag]">
-                  <a className="group">
-                    <b className="text-lg group-hover:text-yellow-500">{t.tag}</b>
-                    <span>({t.count})</span>
-                  </a>
+                <Link as={`/tags/${t.tag}`} href="/tags/[tag]" className="group">
+                  <b className="text-lg group-hover:text-yellow-500">{t.tag}</b>
+                  <span>({t.count})</span>
                 </Link>
               </div>
             )}

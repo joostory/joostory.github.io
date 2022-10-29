@@ -1,11 +1,12 @@
 import Image from 'next/image'
+import profileImage from '../../public/assets/profile.jpg'
 
 export default function ProfileSummary() {
   return (
     <div className='flex flex-col items-center space-y-3'>
       <div className='avatar'>
         <div className='w-24 mask mask-squircle'>
-          <Image
+          <img
             src={'/assets/profile.jpg'}
             width='100' height='100'
             alt='Profile Image'
