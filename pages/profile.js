@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { MailIcon } from '@heroicons/react/outline'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import Layout from '@/components/layout/layout'
 
 export default function Profile() {
@@ -19,7 +19,7 @@ export default function Profile() {
             <div className='font-bold text-xl sm:text-3xl'>Joo</div>
             <div className='text-slate-400'>소프트웨어 개발을 하고 있습니다.</div>
             <div className='flex space-x-1 items-center'>
-              <MailIcon className='h-4 w-4' />
+              <EnvelopeIcon className='h-4 w-4' />
               <span>joo@joostory.net</span>
             </div>
           </div>
