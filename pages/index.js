@@ -1,7 +1,6 @@
 import MoreStories from '@/components/post/more-stories'
 import Layout from '@/components/layout/layout'
 import { getAllPosts } from '@/lib/api'
-import ProfileSummary from '@/components/profile/profile-summary'
 import MetaIndex from '@/components/layout/meta-index'
 import ContentBody from '@/components/layout/content-body'
 import IndexProfile from '@/components/profile/index-profile'
