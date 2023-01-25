@@ -1,4 +1,4 @@
-import ProfileSummary from "./profile-summary";
+import ProfileSummary from "@/components/profile/profile-summary";
 
 export default function IndexProfile() {
   return (

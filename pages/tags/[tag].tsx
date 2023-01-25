@@ -3,21 +3,12 @@ import ContentHeader from "@/components/layout/content-header";
 import Layout from "@/components/layout/layout";
 import MetaIndex from "@/components/layout/meta-index";
 import MoreStories from "@/components/post/more-stories";
-import { getAllPosts, getAllTags } from "@/lib/api";
+import { getAllPosts, getAllTags, Post } from "@/lib/api";
 
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const tag = params.tag
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'tags',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
-
+  const allPosts = getAllPosts()
   const posts = allPosts.filter(post => post.tags.indexOf(tag) >= 0)
 
   return {
@@ -40,7 +31,12 @@ export async function getStaticPaths() {
   }
 }
 
-export default function TagPostList({ tag, posts }) {
+type TagPostListProps = {
+  tag: string,
+  posts: Post[]
+}
+
+export default function TagPostList({ tag, posts }: TagPostListProps) {
   return (
     <>
       <Layout>

@@ -2,7 +2,7 @@ import ContentBody from "@/components/layout/content-body";
 import ContentHeader from "@/components/layout/content-header";
 import Layout from "@/components/layout/layout";
 import MetaIndex from "@/components/layout/meta-index";
-import { getAllTags } from "@/lib/api";
+import { getAllTags, Tag } from "@/lib/api";
 import Link from "next/link";
 
 export async function getStaticProps() {
@@ -12,7 +12,11 @@ export async function getStaticProps() {
   }
 }
 
-export default function Tags({ tags }) {
+type TagsProps = {
+  tags: Tag[]
+}
+
+export default function Tags({ tags }: TagsProps) {
   return (
     <>
       <Layout>

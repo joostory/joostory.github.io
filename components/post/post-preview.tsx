@@ -2,13 +2,22 @@ import Image from 'next/image'
 import DateFormatter from '../common/date-formatter'
 import Link from 'next/link'
 
+
+type PostPreviewProps = {
+  title: string
+  coverImage?: string
+  date: string
+  excerpt: string
+  slug: string
+}
+
 export default function PostPreview({
   title,
   coverImage,
   date,
   excerpt,
   slug,
-}) {
+}: PostPreviewProps) {
   return (
     <div>
       <Link as={`/posts/${slug}`} href="/posts/[slug]" className='group flex space-x-5'>
@@ -23,8 +32,8 @@ export default function PostPreview({
               src={coverImage}
               alt={`Cover Image for ${title}`}
               layout="responsive"
-              width={'100vw'}
-              height={'100vh'}
+              width={100}
+              height={100}
             />
           </div>
         }

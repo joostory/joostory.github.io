@@ -1,6 +1,10 @@
 import { parseISO, format } from 'date-fns'
 
-export default function DateFormatter({ dateString }) {
+type DateFormatterProps = {
+  dateString: string
+}
+
+export default function DateFormatter({ dateString }: DateFormatterProps) {
   const date = parseISO(dateString)
   try {
     const dateStr = format(date, 'yyyy.MM.dd HH:mm')

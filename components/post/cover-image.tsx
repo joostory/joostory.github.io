@@ -2,7 +2,15 @@ import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function CoverImage({ title, src, slug, height, width }) {
+type CoverImageProps = {
+  title: string
+  src: string
+  slug: string
+  height: number
+  width: number
+}
+
+export default function CoverImage({ title, src, slug, height, width }: CoverImageProps) {
   const image = (
     <Image
       src={src}

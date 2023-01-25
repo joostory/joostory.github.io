@@ -1,6 +1,13 @@
+import { OgImage } from '@/lib/api'
 import Head from 'next/head'
 
-export default function MetaPost({title, summary, ogImage}) {
+type MetaPostProps = {
+  title: string
+  summary: string
+  ogImage: OgImage
+}
+
+export default function MetaPost({title, summary, ogImage}: MetaPostProps) {
   return (
     <Head>
       <title>{title}</title>

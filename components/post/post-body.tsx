@@ -1,6 +1,11 @@
 import Link from "next/link"
 
-export default function PostBody({ content, tags }) {
+type PostBodyProps = {
+  content: string,
+  tags: string[]
+}
+
+export default function PostBody({ content, tags }: PostBodyProps) {
   return (
     <div className='pt-2 pb-10'>
       <article

@@ -3,7 +3,7 @@ import Head from 'next/head'
 export default function Meta() {
   return (
     <Head>
-      {/* <link
+      <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicons/apple-touch-icon.png"
@@ -29,7 +29,7 @@ export default function Meta() {
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
+      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
   )

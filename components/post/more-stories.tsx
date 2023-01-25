@@ -1,6 +1,11 @@
+import { Post } from '@/lib/api'
 import PostPreview from './post-preview'
 
-export default function MoreStories({ posts }) {
+type MoreStoriesProps = {
+  posts: Post[]
+}
+
+export default function MoreStories({ posts }: MoreStoriesProps) {
   return (
     <section>
       <div>
@@ -11,7 +16,6 @@ export default function MoreStories({ posts }) {
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
-              author={post.author}
               slug={post.slug}
               excerpt={post.excerpt}
             />

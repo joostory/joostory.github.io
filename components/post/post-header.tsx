@@ -1,7 +1,12 @@
-import DateFormatter from '../common/date-formatter'
-import PostTitle from './post-title'
+import DateFormatter from '@/components/common/date-formatter'
+import PostTitle from '@/components/post/post-title'
 
-export default function PostHeader({ title, date, tags }) {
+type PostHeaderProps = {
+  title: string
+  date: string
+}
+
+export default function PostHeader({ title, date }: PostHeaderProps) {
   return (
     <div className='pt-40 pb-32 px-20 relative'>
       <PostTitle>{title}</PostTitle>

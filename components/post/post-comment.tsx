@@ -16,8 +16,7 @@ export default function PostComment() {
         theme="dark"
         lang="ko"
         loading="lazy"
-        crossOrigin="anonymous"
-        async />
+      />
     </div>
   )
 }

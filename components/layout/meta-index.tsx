@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { SITE_NAME, OG_IMAGE_URL, PROFILE_DESCRIPTION } from '../../lib/constants'
+import { SITE_NAME, OG_IMAGE_URL, PROFILE_DESCRIPTION } from '@/lib/constants'
 
 export default function MetaIndex() {
   return (

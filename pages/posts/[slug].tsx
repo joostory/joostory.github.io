@@ -1,23 +1,13 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Layout from '@/components/layout/layout'
-import { getPostBySlug, getAllPosts } from '@/lib/api'
+import { getPostBySlug, getAllPosts, Post } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
 import PostView from '@/components/post/post-view'
 
 
-export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'tags',
-    'author',
-    'content',
-    'excerpt',
-    'ogImage',
-    'coverImage',
-  ])
+export async function getStaticProps({ params }: any) {
+  const post = getPostBySlug(params.slug)
   const content = await markdownToHtml(post.content || '')
 
   return {
@@ -31,7 +21,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts()
 
   return {
     paths: posts.map((post) => {
@@ -45,8 +35,11 @@ export async function getStaticPaths() {
   }
 }
 
+type PostPageProps = {
+  post: Post
+}
 
-export default function Post({ post }) {
+export default function PostPage({ post }: PostPageProps) {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -56,11 +49,9 @@ export default function Post({ post }) {
       <PostView
         title={post.title}
         content={post.content}
-        summary={post.excerpt}
+        excerpt={post.excerpt}
         ogImage={post.ogImage}
-        author={post.author}
         tags={post.tags}
-        coverImage={post.coverImage}
         date={post.date}
       />
     </Layout>
