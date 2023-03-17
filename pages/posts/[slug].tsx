@@ -2,20 +2,15 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Layout from '@/components/layout/layout'
 import { getPostBySlug, getAllPosts, Post } from '@/lib/api'
-import markdownToHtml from '@/lib/markdownToHtml'
 import PostView from '@/components/post/post-view'
 
 
 export async function getStaticProps({ params }: any) {
   const post = getPostBySlug(params.slug)
-  const content = await markdownToHtml(post.content || '')
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post: post
     },
   }
 }

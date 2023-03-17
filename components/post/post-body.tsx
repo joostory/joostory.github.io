@@ -1,4 +1,5 @@
 import Link from "next/link"
+import PostContent from "@/components/post/post-content"
 
 type PostBodyProps = {
   content: string,
@@ -8,10 +9,7 @@ type PostBodyProps = {
 export default function PostBody({ content, tags }: PostBodyProps) {
   return (
     <div className='pt-2 pb-10'>
-      <article
-        dangerouslySetInnerHTML={{__html: content}}
-        className='prose'
-      />
+      <PostContent content={content} />
 
       <div className='flex items-center space-x-2 mt-10'>
         {tags.map(tag =>

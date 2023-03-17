@@ -114,15 +114,15 @@ react-router의 HashRouter가 하던 일은 폴더구조를 통해 해결한다.
 
 ```
 /pages
-├   /_app.tsx
-├   /_document.tsx
-├   /index.tsx
-├ ● /[version]
-├   └ index.tsx
-├ ● /[version]/[bible]
-├   └ index.tsx
-├ ● /[version]/[bible]/[chapter]
-└   └ index.tsx
+├─ /_app.tsx
+├─ /_document.tsx
+├─ /index.tsx
+├─ /[version]
+├─ └ index.tsx
+├─ /[version]/[bible]
+├─ └ index.tsx
+├─ /[version]/[bible]/[chapter]
+│  └ index.tsx
 ```
 
 여기까지만 하면 이전에 사용하던 코드를 그대로 재사용해도 문제없이 동작한다. 그런데 나는 typescript를 제대로 사용하기로 했기 때문에 언제까지고 typescript를 js 스타일로 사용할 수는 없다. 그래서 type이 없다고 아우성치는 코드에 type을 지정해주기 시작했다.
