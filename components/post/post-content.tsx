@@ -7,7 +7,6 @@ export default function PostContent({content}: {content: string}) {
   return (
     <ReactMarkdown
       className="prose"
-      children={content}
       remarkPlugins={[remarkGfm]}
       components={{
         code({node, inline, className, children, ...props}) {
@@ -27,6 +26,8 @@ export default function PostContent({content}: {content: string}) {
           )
         }
       }}
-    />
+    >
+      {content}
+    </ReactMarkdown>
   )
 }
