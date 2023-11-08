@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://joostory.net
-
-# Sitemaps
-Sitemap: https://joostory.net/sitemap.xml
