@@ -10,5 +10,4 @@ test('get all posts', () => {
 
 test('get all tags', () => {
   const tags = getAllTags()
-  console.log(tags)
 })
