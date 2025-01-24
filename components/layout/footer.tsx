@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="footer footer-center p-10 text-base-content bg-base-200">
+    <footer className="footer p-10 text-base-content bg-base-300 place-items-center">
       <div className="grid grid-flow-col gap-4">
         <Link href="/" className="link link-hover">Index</Link>
         <Link href="/profile" className="link link-hover">About</Link>

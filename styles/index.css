@@ -1,11 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
 
-@layer base {
-  h3 {
-    font-size: 24px
-  }
+
+@theme {
+  --root-bg: oklch(0 0 0);
 }
 
 .max-w-prose, .prose {
