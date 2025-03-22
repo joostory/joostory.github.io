@@ -1,7 +1,10 @@
 import ReactMarkdown from 'react-markdown'
+import { Kode_Mono, Roboto_Mono } from 'next/font/google'
 import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { materialDark } from '@/lib/synctaxHighrightStyle'
+
+const font = Kode_Mono()
 
 export default function PostContent({content}: {content: string}) {
   return (
@@ -14,7 +17,7 @@ export default function PostContent({content}: {content: string}) {
             return match ? (
               <SyntaxHighlighter
                 style={materialDark}
-                className={className}
+                className={font.className}
                 language={match[1]}
                 PreTag="pre"
               >
