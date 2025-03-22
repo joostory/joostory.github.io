@@ -14,8 +14,9 @@ export default function PostContent({content}: {content: string}) {
             return match ? (
               <SyntaxHighlighter
                 style={materialDark}
+                className={className}
                 language={match[1]}
-                PreTag="div"
+                PreTag="pre"
               >
                 {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
