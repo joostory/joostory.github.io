@@ -4,7 +4,9 @@ import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { materialDark } from '@/lib/synctaxHighrightStyle'
 
-const font = Kode_Mono()
+const font = Kode_Mono({
+  subsets: ["latin"]
+})
 
 export default function PostContent({content}: {content: string}) {
   return (
