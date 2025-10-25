@@ -5,12 +5,13 @@ type DateFormatterProps = {
 }
 
 export default function DateFormatter({ dateString }: DateFormatterProps) {
-  const date = parseISO(dateString)
+  let dateStr = dateString
   try {
-    const dateStr = format(date, 'yyyy.MM.dd HH:mm')
-    return <time dateTime={dateString}>{dateStr}</time>
+    const date = parseISO(dateString)
+    dateStr = format(date, 'yyyy.MM.dd HH:mm')
   } catch (e) {
     console.error(e)
-    return <time dateTime={dateString}>{dateString}</time>  
   }
+
+  return <time dateTime={dateString}>{dateStr}</time>
 }
