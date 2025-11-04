@@ -1,11 +1,11 @@
 @import 'tailwindcss';
 @plugin "daisyui";
-@plugin "@tailwindcss/typography";
-
-
-@theme {
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
   --root-bg: oklch(0 0 0);
 }
+@plugin "@tailwindcss/typography";
 
 .max-w-prose, .prose {
   max-width: 720px;
