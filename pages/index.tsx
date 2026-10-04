@@ -1,38 +1,20 @@
-import MoreStories from '@/components/post/more-stories'
 import Layout from '@/components/layout/layout'
-import { getAllPosts, Post } from '@/lib/api'
 import MetaIndex from '@/components/layout/meta-index'
-import ContentBody from '@/components/layout/content-body'
-import IndexProfile from '@/components/profile/index-profile'
+import HeroSection from '@/components/hub/hero-section'
+import ChannelsSection from '@/components/hub/channels-section'
+import CareerSection from '@/components/hub/career-section'
+import ProjectsSection from '@/components/hub/projects-section'
+import TechStackSection from '@/components/hub/tech-stack-section'
 
-export async function getStaticProps() {
-  const allPosts = getAllPosts()
-  const posts = allPosts.slice(0, 10)
-  return {
-    props: { posts },
-  }
-}
-
-type IndexProps = {
-  posts: Post[]
-}
-
-export default function Index({ posts }: IndexProps) {
+export default function Index() {
   return (
-    <>
-      <Layout>
-        <MetaIndex />
-        
-        <IndexProfile />
-
-        <div className='divider' />
-
-        <ContentBody>
-          {posts.length > 0 &&
-            <MoreStories posts={posts} />
-          }
-        </ContentBody>
-      </Layout>
-    </>
+    <Layout>
+      <MetaIndex />
+      <HeroSection />
+      <ChannelsSection />
+      <CareerSection />
+      <ProjectsSection />
+      <TechStackSection />
+    </Layout>
   )
 }

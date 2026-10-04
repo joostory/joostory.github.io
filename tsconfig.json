@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,17 +18,9 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "experimentalDecorators": true,
-    "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ],
-      "@/styles/*": [
-        "styles/*"
+      "@/*": [
+        "./*"
       ]
     }
   },
@@ -38,6 +30,7 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "__tests__"
   ]
 }
