@@ -1,6 +1,9 @@
+import {
+  ArrowTopRightOnSquareIcon,
+  BriefcaseIcon,
+} from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { CAREER_HISTORY } from '@/lib/constants'
-import { BriefcaseIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 export default function CareerSection() {
   return (
@@ -8,7 +11,9 @@ export default function CareerSection() {
       <div className="max-w-3xl mx-auto px-5 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 gap-2">
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight">Career</h2>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
+              Career
+            </h2>
             <p className="text-xs sm:text-sm text-base-content/60 mt-1">
               지금까지 일해온 경험입니다.
             </p>
@@ -25,8 +30,11 @@ export default function CareerSection() {
         </div>
 
         <div className="space-y-6">
-          {CAREER_HISTORY.map((item, idx) => (
-            <div key={idx} className="card bg-base-100 border border-base-300">
+          {CAREER_HISTORY.map((item) => (
+            <div
+              key={item.company}
+              className="card bg-base-100 border border-base-300"
+            >
               <div className="card-body p-5 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-3.5 border-b border-base-200">
                   <div className="flex items-center gap-2.5">
@@ -34,8 +42,12 @@ export default function CareerSection() {
                       <BriefcaseIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold">{item.company}</h3>
-                      <p className="text-xs text-base-content/60 font-mono">{item.role}</p>
+                      <h3 className="text-base sm:text-lg font-bold">
+                        {item.company}
+                      </h3>
+                      <p className="text-xs text-base-content/60 font-mono">
+                        {item.role}
+                      </p>
                     </div>
                   </div>
                   <span className="badge badge-neutral text-xs font-mono self-start sm:self-auto mt-1 sm:mt-0">
@@ -52,9 +64,9 @@ export default function CareerSection() {
                     주요 서비스 & 업무
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {item.services.map((service, sIdx) => (
+                    {item.services.map((service) => (
                       <div
-                        key={sIdx}
+                        key={service.name}
                         className="p-3.5 rounded-xl bg-base-200/40 border border-base-200 flex flex-col justify-between"
                       >
                         <div>

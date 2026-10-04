@@ -1,7 +1,7 @@
+import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PROFILE } from '@/lib/constants'
-import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline'
 
 export default function HeroSection() {
   return (

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
@@ -20,12 +20,12 @@
   --color-primary-content: #1c1917 !important;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --color-primary: #facc15 !important;
   --color-primary-content: #1c1917 !important;
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --color-primary: #eab308 !important;
   --color-primary-content: #1c1917 !important;
 }

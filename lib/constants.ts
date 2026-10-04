@@ -14,8 +14,8 @@ export const PROFILE = {
 
 export const CHANNELS = [
   {
-    title: "Blog",
-    name: "blog.joostory.net",
+    title: 'Blog',
+    name: 'blog.joostory.net',
     url: 'https://blog.joostory.net',
     description: '개발 경험과 생각, 일상을 기록하는 블로그',
     badge: 'Blog',
@@ -48,7 +48,8 @@ export const CAREER_HISTORY = [
     company: '카카오 (Kakao Corp.)',
     role: 'Software Engineer',
     period: '2008.01 ~ 현재',
-    description: '오픈채팅, 구독, 블로그, 웹메일 등 다양한 서비스의 백엔드 시스템을 개발하고 운영해 왔습니다.',
+    description:
+      '오픈채팅, 구독, 블로그, 웹메일 등 다양한 서비스의 백엔드 시스템을 개발하고 운영해 왔습니다.',
     services: [
       {
         name: '오픈채팅 / 오픈링크',
@@ -58,7 +59,8 @@ export const CAREER_HISTORY = [
       {
         name: 'My구독 & 신규 서비스',
         period: '2019.10 ~ 2022.12',
-        description: 'My구독 개발, 북미 대상 신규 서비스 WARPNOW 및 MM 서비스 개발',
+        description:
+          'My구독 개발, 북미 대상 신규 서비스 WARPNOW 및 MM 서비스 개발',
       },
       {
         name: '티스토리 & 브런치스토리',

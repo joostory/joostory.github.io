@@ -1,14 +1,22 @@
+import {
+  ArrowTopRightOnSquareIcon,
+  CodeBracketIcon,
+} from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { FEATURED_PROJECTS } from '@/lib/constants'
-import { CodeBracketIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-12 sm:py-16 bg-base-200/40 border-t border-base-300">
+    <section
+      id="projects"
+      className="py-12 sm:py-16 bg-base-200/40 border-t border-base-300"
+    >
       <div className="max-w-3xl mx-auto px-5 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 gap-2">
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight">Projects</h2>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
+              Projects
+            </h2>
             <p className="text-xs sm:text-sm text-base-content/60 mt-1">
               개인적으로 만들고 있는 프로젝트입니다.
             </p>
@@ -25,9 +33,9 @@ export default function ProjectsSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          {FEATURED_PROJECTS.map((project, idx) => (
+          {FEATURED_PROJECTS.map((project) => (
             <Link
-              key={idx}
+              key={project.name}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -49,8 +57,11 @@ export default function ProjectsSection() {
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mt-3.5 pt-2.5 border-t border-base-200">
-                  {project.tech.map((t, tIdx) => (
-                    <span key={tIdx} className="badge badge-xs sm:badge-sm badge-ghost text-[11px] font-mono">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="badge badge-xs sm:badge-sm badge-ghost text-[11px] font-mono"
+                    >
                       {t}
                     </span>
                   ))}

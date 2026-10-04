@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 export default function ProfileRedirect() {
   const router = useRouter()

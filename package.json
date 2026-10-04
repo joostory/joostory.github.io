@@ -8,27 +8,32 @@
     "start": "next start",
     "clean": "rm -rf .next out",
     "build-sitemap": "next-sitemap",
-    "test": "jest"
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "daisyui": "^5.7.16",
-    "next": "^16.3.0",
+    "daisyui": "^5.7.47",
+    "next": "^16.3.8",
     "next-sitemap": "^4.2.3",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "@jest/globals": "^30.4.1",
+    "@biomejs/biome": "^2.5.15",
     "@tailwindcss/postcss": "^4.3.3",
-    "@testing-library/jest-dom": "^7.0.0",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^14.6.3",
-    "@types/react": "^19.2.18",
-    "jest": "^30.4.2",
-    "jest-environment-jsdom": "^30.4.1",
-    "postcss": "^8.5.25",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "26.6.4",
+    "@types/react": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.2",
+    "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
   }
 }

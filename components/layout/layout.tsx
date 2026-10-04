@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import Footer from './footer'
 import Meta from './meta'
 
@@ -6,7 +6,7 @@ type LayoutProps = {
   children: ReactNode
 }
 
-export default function Layout({children }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Meta />
