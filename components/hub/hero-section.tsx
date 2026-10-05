@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section id="about" className="pt-12 pb-10 sm:pt-24 sm:pb-16">
       <div className="max-w-3xl mx-auto px-5 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
-          <div className="avatar shrink-0">
+          <div className="avatar shrink-0 self-start">
             <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden">
               <Image
                 src={PROFILE.avatar}
