@@ -79,7 +79,7 @@ export const CAREER_HISTORY = [
 export const FEATURED_PROJECTS = [
   {
     name: 'Tistory Editor',
-    description: '티스토리 API를 사용해 글을 작성하고 관리하는 에디터',
+    description: 'API를 사용해 글을 작성하고 관리하는 에디터',
     url: 'https://github.com/joostory/tistory-editor',
     tech: ['TypeScript', 'React'],
   },
@@ -97,7 +97,7 @@ export const FEATURED_PROJECTS = [
   },
   {
     name: 'Boardgame Helper',
-    description: '보드게임 점수 계산과 진행을 돕는 유틸리티',
+    description: '보드게임 점수 계산과 진행을 돕는 유틸리티 & 미니게임',
     url: 'https://github.com/joostory/boardgame',
     tech: ['TypeScript'],
   },
